@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Team = () => (
-  <section className="max-w-5xl mx-auto py-10">
+  <section className="max-w-5xl mx-auto mt-10 py-10">
     <h2 className="text-3xl font-bold text-blue-900 mb-6">Organization Structure</h2>
     <div className="grid md:grid-cols-2 gap-8">
       <div className="bg-white shadow rounded-lg p-6">
