@@ -31,8 +31,8 @@ const Home = () => {
           backgroundImage: 'url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-black/70"></div>
-        <div className="absolute inset-0 bg-black opacity-30"></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-black/70"></div>
+        <div className="absolute inset-0 bg-black opacity-30"></div> */}
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4 pt-24 pb-16">
