@@ -43,24 +43,6 @@ const HeroSlideshow  = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-20 bg-black bg-opacity-30 backdrop-blur-md">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-white">
-              Vivarium <span style={{color: '#B3BD31'}}>Design Studio</span>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <a href="#home" className="text-white hover:text-yellow-400 transition-colors">Home</a>
-              <a href="#about" className="text-white hover:text-yellow-400 transition-colors">About</a>
-              <a href="#services" className="text-white hover:text-yellow-400 transition-colors">Services</a>
-              <a href="#portfolio" className="text-white hover:text-yellow-400 transition-colors">Portfolio</a>
-              <a href="#contact" className="text-white hover:text-yellow-400 transition-colors">Contact</a>
-            </nav>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Image Slider */}
@@ -163,4 +145,4 @@ const HeroSlideshow  = () => {
   );
 };
 
-export default HeroSlideshow ;
+export default HeroSlideshow;

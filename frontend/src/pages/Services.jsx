@@ -18,7 +18,7 @@ const Services = () => (
         </div>
         <div className="p-6">
           <h3 className="text-xl font-semibold mb-3" style={{ color: '#B3BD31' }}>Building Permits</h3>
-          <p className="text-gray-700">Development Permission (CC / OC), Project Feasibility and Reporting, Master Planning, Design Consultation and Scrutiny, Documents Compliance, Design Approvals, NOCs Approvals (Fire, MPCB, Road, Utilities, Irrigation), Conversion of Land Usage.</p>
+        <p className="text-gray-700">Development Permission (CC / OC), Project Feasibility and Reporting, Master Planning, Design Consultation and Scrutiny, Documents Compliance, Design Approvals, NOCs Approvals (Fire, MPCB, Road, Utilities, Irrigation), Conversion of Land Usage.</p>
         </div>
       </div>
       

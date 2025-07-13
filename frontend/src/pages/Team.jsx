@@ -89,11 +89,11 @@ const Team = () => (
       {/* Atul Kumar Yadav */}
       <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
         <div className="h-80 overflow-hidden">
-          {/* <img 
+          <img 
             src="/Client/Picture25.png" 
             alt="Atul Kumar Yadav" 
             className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
-          /> */}
+          />
         </div>
         <div className="p-6">
           <h3 className="text-xl font-semibold mb-1" style={{ color: '#B3BD31' }}>Atul Kumar Yadav</h3>
@@ -114,11 +114,11 @@ const Team = () => (
       {/* Mohammad Ehsan */}
       <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
         <div className="h-80 overflow-hidden">
-          {/* <img 
+          <img 
             src="/Client/Picture26.png" 
             alt="Mohammad Ehsan" 
             className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105" 
-          /> */}
+          />
         </div>
         <div className="p-6">
           <h3 className="text-xl font-semibold mb-1" style={{ color: '#B3BD31' }}>Mohammad Ehsan</h3>
