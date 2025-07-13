@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import HeroSlideshow from './HeroSlideshow';
 
 const ConsultingServicesPage = () => {
   const fadeInUp = {
@@ -53,21 +54,9 @@ const ConsultingServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm px-6 py-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-2xl font-bold text-gray-800">
-            Krauschaline
-          </div>
-          <div className="hidden md:flex space-x-8">
-            <a href="#home" className="text-gray-600 hover:text-gray-800">Home</a>
-            <a href="#services" className="text-gray-600 hover:text-gray-800">Services</a>
-            <a href="#about" className="text-gray-600 hover:text-gray-800">About</a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-800">Contact</a>
-          </div>
-        </div>
-      </nav>
-
+      {/* Hero Section */}
+      <HeroSlideshow />
+ 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Advice Section */}
