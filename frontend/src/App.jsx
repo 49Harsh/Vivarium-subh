@@ -10,18 +10,22 @@ import Contact from './pages/Contact';
 import WhyUs from './pages/WhyUs';
 import Process from './pages/Process';
 import NotFound from './pages/NotFound';
+import Career from './pages/Career';
+import ConsultingServicesPage from './components/landing/ConsultingServicesPage';
 
 function App() {
   return (
     <Router>
       <Layout>
         <Routes>
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/" element={<ConsultingServicesPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/career" element={<Career />} />
           <Route path="/why-us" element={<WhyUs />} />
           <Route path="/process" element={<Process />} />
           <Route path="*" element={<NotFound />} />

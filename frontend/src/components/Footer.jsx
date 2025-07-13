@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => (
-  <footer className="bg-blue-900 text-white">
+  <footer className="bg-[#B3BD31] text-white">
     {/* Main Footer */}
     <div className="max-w-7xl mx-auto px-4 pt-16 pb-10">
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
