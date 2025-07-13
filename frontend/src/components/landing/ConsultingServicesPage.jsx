@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Link } from 'react-router-dom';
 import HeroSlideshow from './HeroSlideshow';
 
 const ConsultingServicesPage = () => {
@@ -59,6 +60,74 @@ const ConsultingServicesPage = () => {
  
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-12">
+
+        {/* Project Overview Section - NEW SECTION */}
+        <div className="mb-20">
+          <AnimatedSection animation={fadeInUp} id="project-overview">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">Project Overview</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Explore our diverse portfolio of architectural projects spanning residential, commercial, and urban development. 
+                Each project showcases our commitment to innovative design, sustainable practices, and client satisfaction.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Project Card 1 */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div 
+                  className="h-64 bg-cover bg-center"
+                  style={{ backgroundImage: `url('/Interior_Project/Picture10.jpg')` }}
+                ></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>Residential Interiors</h3>
+                  <p className="text-gray-600 mb-4">Modern living spaces designed with comfort and aesthetics in mind.</p>
+                </div>
+              </div>
+              
+              {/* Project Card 2 */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div 
+                  className="h-64 bg-cover bg-center"
+                  style={{ backgroundImage: `url('/INTERIOR PROJECTS (COMMERCIAL)/Picture16.jpg')` }}
+                ></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>Commercial Spaces</h3>
+                  <p className="text-gray-600 mb-4">Functional and inspiring workplaces for businesses of all sizes.</p>
+                </div>
+              </div>
+              
+              {/* Project Card 3 */}
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div 
+                  className="h-64 bg-cover bg-center"
+                  style={{ backgroundImage: `url('/PROJECTS- URBAN PROJECTS/Picture20.jpg')` }}
+                ></div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>Urban Development</h3>
+                  <p className="text-gray-600 mb-4">Thoughtfully designed urban spaces that enhance community life.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center mt-10">
+              <Link to="/projects">
+                <motion.button 
+                  className="px-8 py-3 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center mx-auto"
+                  style={{ backgroundColor: '#B3BD31' }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View All Projects
+                  <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/>
+                  </svg>
+                </motion.button>
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+
         {/* Advice Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <AnimatedSection animation={fadeInLeft} id="advice">
@@ -435,6 +504,54 @@ const ConsultingServicesPage = () => {
                   </svg>
                 </motion.a>
               </div>
+            </div>
+          </AnimatedSection>
+        </div>
+
+        {/* Our Clients Section - NEW SECTION */}
+        <div className="mb-20">
+          <AnimatedSection animation={fadeInUp} id="our-clients">
+            <div className="text-center mb-10">
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Clients</h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                We're proud to have worked with a diverse range of clients across industries. Our partnerships are built on trust, communication, and delivering exceptional results.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
+              {/* Client Logos */}
+              <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-28">
+                <img src="/Client/Picture25.png" alt="Client 1" className="max-h-16 max-w-full" />
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-28">
+                <img src="/Client/Picture26.png" alt="Client 2" className="max-h-16 max-w-full" />
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-28">
+                <img src="/Client/Picture27.png" alt="Client 3" className="max-h-16 max-w-full" />
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-28">
+                <img src="/Client/Picture28.png" alt="Client 4" className="max-h-16 max-w-full" />
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-28">
+                <img src="/Client/Picture29.png" alt="Client 5" className="max-h-16 max-w-full" />
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center h-28">
+                <img src="/Client/Picture30.png" alt="Client 6" className="max-h-16 max-w-full" />
+              </div>
+            </div>
+            
+            <div className="mt-10 text-center">
+              <p className="text-gray-700 font-medium">Join our growing list of satisfied clients</p>
+              <Link to="/contact">
+                <motion.button 
+                  className="mt-4 px-8 py-3 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  style={{ backgroundColor: '#B3BD31' }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Contact Us
+                </motion.button>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
