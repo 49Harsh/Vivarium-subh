@@ -15,7 +15,7 @@ const About = () => (
       </div>
     </div>
     
-    <div className="grid md:grid-cols-2 gap-12 items-center">
+    <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
       <div className="order-2 md:order-1 rounded-lg overflow-hidden shadow-xl">
         <img src="/INTERIOR PROJECTS (COMMERCIAL)/Picture17.jpg" alt="Commercial Interior" className="w-full h-auto object-cover" />
       </div>
@@ -23,6 +23,37 @@ const About = () => (
         <h3 className="text-2xl font-semibold mb-3" style={{ color: '#B3BD31' }}>Our Vision</h3>
         <p className="text-gray-700 mb-6">Our vision is to redefine architecture by fostering an integrative approach that merges urbanism, landscape, history, social frameworks, and regulatory codes. We aspire to create designs where simplicity meets depth, maximizing impact through minimal forms.</p>
         <p className="text-gray-700 mb-4">By incorporating Indigenous perspectives and re-imagining traditional design principles, we seek to inspire a shift in conventional architectural thought and cultivate spaces that resonate with cultural authenticity and the inter-connectedness of all life forms.</p>
+      </div>
+    </div>
+    
+    {/* Why Us Section */}
+    <div className="mt-16">
+      <h2 className="text-3xl font-bold mb-6" style={{ color: '#B3BD31' }}>Why Us?</h2>
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>Local Expertise</h3>
+          <p className="text-gray-700">Robust network and deep understanding of local building regulations and business practices in major Indian cities, fluent in Hindi, Marathi and English.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>Tailored Solutions</h3>
+          <p className="text-gray-700">Specialised support across Architecture, Interior and Engineering with Industry specific strategies.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>Strong Ethics and Integrity</h3>
+          <p className="text-gray-700">Commitment to honesty, confidentiality and adherence to industry standards.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>Personalized Client Support</h3>
+          <p className="text-gray-700">Dedicated Architects providing proactive, individualized support.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>Proven Expertise</h3>
+          <p className="text-gray-700">Skilled professionals with a successful track record in handling complex projects and permissions.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300">
+          <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>High End Solutions</h3>
+          <p className="text-gray-700">Timely, high-quality service delivery with client specific solutions and transparent communication.</p>
+        </div>
       </div>
     </div>
   </section>

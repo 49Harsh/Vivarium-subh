@@ -51,10 +51,11 @@ const Navbar = () => {
     }`}>
       <div className="flex justify-between items-center h-[60px] lg:h-[70px]">
         {/* Logo section - brand color background */}
-        <div className={`bg-[#B3BD31] h-full py-2 px-4 sm:px-6 flex items-center transition-all duration-300 ${
+        <div className={`bg-[#B3BD31] h-full py-2 px-4 sm:px-6 flex items-center justify-center transition-all duration-300 ${
           scrolled ? 'lg:pl-8' : 'lg:pl-6'
-        }`}>
-          <Link to="/" className="flex items-center justify-center">
+        } relative ml-24`}>
+          <div className="absolute top-0 left-0 w-full h-[140%] bg-[#B3BD31] z-[-1] rounded-br-lg rounded-bl-lg shadow-md"></div>
+          <Link to="/" className="flex items-center justify-center mt-6">
             <img 
               src="/logo.png" 
               alt="Vivarium Design Studio" 

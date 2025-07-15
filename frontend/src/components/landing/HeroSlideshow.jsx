@@ -110,7 +110,7 @@ const HeroSlideshow  = () => {
           <p className="text-xl md:text-2xl mb-8 opacity-90">
             Creating pioneering, interdisciplinary design solutions since 2021
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               style={{backgroundColor: '#B3BD31'}}
               className="px-8 py-3 text-black font-semibold rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105"
@@ -120,7 +120,7 @@ const HeroSlideshow  = () => {
             <button className="px-8 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300">
               Get In Touch
             </button>
-          </div>
+          </div> */}
         </div>
       </section>
 
