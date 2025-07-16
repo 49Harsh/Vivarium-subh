@@ -2,7 +2,7 @@ import React from 'react';
 
 const Career = () => (
   <section className="max-w-6xl mx-auto mt-24 py-8 px-4">
-    <h1 className="text-4xl font-bold text-gray-800 mb-8">Join Our Team</h1>
+    {/* <h1 className="text-4xl font-bold text-gray-800 mb-8">Join Our Team</h1>
     
     <div className="mb-10">
       <p className="text-lg text-gray-700 mb-6">
@@ -15,9 +15,9 @@ const Career = () => (
           We value innovation, sustainability, and excellence in everything we do.
         </p>
       </div>
-    </div>
+    </div> */}
     
-    <div className="mb-12">
+    {/* <div className="mb-12">
       <h2 className="text-2xl font-bold text-[#B3BD31] mb-6">Current Openings</h2>
       
       <div className="space-y-6">
@@ -42,12 +42,12 @@ const Career = () => (
           <button className="bg-[#B3BD31] text-white py-2 px-6 rounded hover:bg-[#9da728] transition-colors">Apply Now</button>
         </div>
       </div>
-    </div>
+    </div> */}
     
     <div className="bg-gray-50 rounded-lg p-8">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Don't see a suitable position?</h2>
+      {/* <h2 className="text-2xl font-bold text-gray-800 mb-6">Don't see a suitable position?</h2>
       <p className="mb-6">We're always on the lookout for exceptional talent. Send us your resume and portfolio, and we'll keep you in mind for future opportunities.</p>
-      
+       */}
       <div className="flex flex-col md:flex-row gap-4">
         <input 
           type="email" 
