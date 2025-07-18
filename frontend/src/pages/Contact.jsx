@@ -8,7 +8,7 @@ const Contact = () => {
     subject: '',
     message: ''
   });
-  
+
   const [formStatus, setFormStatus] = useState({
     submitted: false,
     error: false,
@@ -25,14 +25,14 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Simulate form submission - in a real implementation, this would send data to a server
     setFormStatus({
       submitted: true,
       error: false,
       message: 'Thank you for your message. We will get back to you soon!'
     });
-    
+
     // Reset form after successful submission
     setFormData({
       name: '',
@@ -65,7 +65,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="bg-gray-50 p-10 rounded-xl shadow-soft hover-lift reveal">
             <h2 className="text-3xl font-bold text-gradient mb-10 font-playfair">Connect With Us</h2>
-            
+
             <div className="space-y-10">
               <div className="flex items-start stagger-container">
                 <div className="w-14 h-14 gradient-primary rounded-full flex items-center justify-center mr-6 shrink-0 stagger-item">
@@ -83,7 +83,7 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex items-start stagger-container">
                 <div className="w-14 h-14 gradient-primary rounded-full flex items-center justify-center mr-6 shrink-0 stagger-item">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,7 +97,7 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start stagger-container">
                 <div className="w-14 h-14 gradient-primary rounded-full flex items-center justify-center mr-6 shrink-0 stagger-item">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -131,7 +131,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="reveal">
             <h2 className="text-3xl font-bold text-gradient mb-10 font-playfair">Send Us a Message</h2>
-            
+
             {formStatus.submitted ? (
               <div className="bg-green-50 border border-green-200 text-green-800 p-6 rounded-lg animate-fade-in">
                 <h3 className="text-lg font-semibold mb-2">Thank You!</h3>
@@ -225,58 +225,24 @@ const Contact = () => {
           <div className="mb-20 reveal">
             <h2 className="text-3xl font-bold text-gradient mb-10 font-playfair text-center">Our Location</h2>
             <div className="h-96 bg-gray-200 rounded-xl overflow-hidden shadow-soft">
-              {/* Placeholder for Google Maps - In a real implementation, you would add actual Google Maps here */}
-              <div className="w-full h-full flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors">
-                <div className="text-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-blue-800 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <p className="text-gray-600 text-lg">Interactive Map Will Be Displayed Here</p>
-                </div>
-              </div>
+              {/* Google Maps Embed for Kharghar, Navi Mumbai location */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5234567890123!2d73.06789!3d19.04567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c24cffffffff%3A0x0!2sKharghar%2C%20Navi%20Mumbai%2C%20Maharashtra%20410210!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Vivarium Design Studio Location - Kharghar, Navi Mumbai"
+              ></iframe>
             </div>
           </div>
 
-          <div className="reveal">
-            <h2 className="text-3xl font-bold text-gradient mb-10 font-playfair text-center">Our Clients</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="p-8 bg-white rounded-lg shadow-soft hover-lift flex items-center justify-center h-36 stagger-item">
-                <p className="text-2xl font-bold text-blue-900">YES GERMANY</p>
-              </div>
-              <div className="p-8 bg-white rounded-lg shadow-soft hover-lift flex items-center justify-center h-36 stagger-item">
-                <p className="text-2xl font-bold text-blue-900">OLYMPIA</p>
-              </div>
-              {/* Add more client logos as needed */}
-              <div className="p-8 bg-white rounded-lg shadow-soft hover-lift flex items-center justify-center h-36 stagger-item">
-                <div className="text-center">
-                  <p className="text-lg font-semibold text-blue-900">Your Company</p>
-                  <p className="text-sm text-gray-500 mt-2">Could be here</p>
-                </div>
-              </div>
-              <div className="p-8 bg-white rounded-lg shadow-soft hover-lift flex items-center justify-center h-36 stagger-item">
-                <div className="text-center">
-                  <p className="text-lg font-semibold text-blue-900">Join Our</p>
-                  <p className="text-sm text-gray-500 mt-2">Valued Clients</p>
-                </div>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 gradient-primary text-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 reveal font-playfair">Ready to Start Your Project?</h2>
-          <p className="text-xl max-w-3xl mx-auto mb-8 reveal">
-            Contact us today to schedule a consultation and take the first step towards bringing your vision to life.
-          </p>
-          <a href="tel:+919930336099" className="px-8 py-3 bg-white text-blue-900 font-semibold rounded-full inline-block hover-lift reveal">
-            Call Now: +91 9930336099
-          </a>
-        </div>
-      </section>
     </div>
   );
 };
