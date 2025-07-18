@@ -77,9 +77,9 @@ const Contact = () => {
                 <div className="stagger-item">
                   <h3 className="text-xl font-semibold text-blue-800 mb-2">Office Address</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Office No. 5, Plot No. 3A, Sairama CHS,<br />
-                    Station Rd., Sector-2, Kharghar,<br />
-                    Navi Mumbai - 410210
+                    Office No. 5, Vivarium Design Studio Private Limited,<br />
+                    Sai Rama, Plot No. 3A, Sector 2,<br />
+                    Kharghar, Navi Mumbai, Maharashtra 410210
                   </p>
                 </div>
               </div>
@@ -227,15 +227,31 @@ const Contact = () => {
             <div className="h-96 bg-gray-200 rounded-xl overflow-hidden shadow-soft">
               {/* Google Maps Embed for Kharghar, Navi Mumbai location */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5234567890123!2d73.06789!3d19.04567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c24cffffffff%3A0x0!2sKharghar%2C%20Navi%20Mumbai%2C%20Maharashtra%20410210!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8234567890123!2d73.06336975739643!3d19.028804268820384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAxJzQzLjciTiA3M8KwMDMnNDguMSJF!5e0!3m2!1sen!2sin!4v1640995200000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Vivarium Design Studio Location - Kharghar, Navi Mumbai"
+                title="Vivarium Design Studio - Office No. 5, Sai Rama, Kharghar"
               ></iframe>
+
+              {/* Direct Google Maps Link */}
+              <div className="mt-4 text-center">
+                <a
+                  href="https://maps.app.goo.gl/mwCNg7fZECLAbCD66"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-3 bg-[#B3BD31] text-white font-semibold rounded-lg hover:bg-[#9da728] transition-colors duration-300 shadow-lg"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
           </div>
 
