@@ -51,9 +51,9 @@ const Navbar = () => {
       <div className="flex justify-between items-center h-[50px] sm:h-[60px] lg:h-[70px] px-2 sm:px-4">
         {/* Logo section - brand color background */}
         <div className={`bg-[#B3BD31] h-full py-1 sm:py-2 px-2 sm:px-4 lg:px-6 flex items-center justify-center transition-all duration-300 ${scrolled ? 'lg:pl-8' : 'lg:pl-6'
-          } relative ml-2 sm:ml-6 md:ml-12 lg:ml-16 xl:ml-24`}>
-          <div className="absolute top-0 left-0 w-full h-[140%] bg-[#B3BD31] z-[-1] rounded-br-lg rounded-bl-lg shadow-md"></div>
-          <Link to="/" className="flex items-center justify-center">
+          } relative ml-2  sm:ml-6 md:ml-12 lg:ml-16 xl:ml-24`}>
+          <div className="absolute top-0  left-0 w-full h-[140%] bg-[#B3BD31] z-[-1] rounded-br-lg rounded-bl-lg shadow-md"></div>
+          <Link to="/" className="flex mt-6 items-center justify-center">
             <img
               src="/logo.png"
               alt="Vivarium Design Studio"
