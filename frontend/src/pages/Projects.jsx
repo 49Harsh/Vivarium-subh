@@ -5,13 +5,17 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('architecture');
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
+  const [isArchHovered, setIsArchHovered] = useState(false);
+  const [isResHovered, setIsResHovered] = useState(false);
+  const [isComHovered, setIsComHovered] = useState(false);
+  const [isUrbanHovered, setIsUrbanHovered] = useState(false);
+
   const categories = [
     { id: 'architecture', name: 'Architecture' },
     { id: 'interior', name: 'Interior' },
     { id: 'urban', name: 'Urban Projects' }
   ];
-  
+
   const projects = {
     // Architecture Projects
     architecture: [
@@ -58,7 +62,7 @@ const Projects = () => {
         description: 'Mixed-use development combining residential and commercial spaces.'
       }
     ],
-    
+
     // Interior Projects
     interior: {
       residential: [
@@ -136,7 +140,7 @@ const Projects = () => {
         }
       ]
     },
-    
+
     // Urban Projects
     urban: [
       {
@@ -188,7 +192,7 @@ const Projects = () => {
         description: project.description,
         type: project.type
       }));
-      
+
       const commercial = projects.interior.commercial.map(project => ({
         id: project.id,
         image: project.image,
@@ -196,10 +200,10 @@ const Projects = () => {
         description: project.description,
         type: project.type
       }));
-      
+
       images = [...residential, ...commercial];
     }
-    
+
     setAllImages(images);
   }, [activeCategory]);
 
@@ -227,60 +231,88 @@ const Projects = () => {
 
   // Update selected image when currentImageIndex changes
   useEffect(() => {
-    if (allImages.length > 0 && currentImageIndex >= 0) {
+    if (allImages.length > 0 && currentImageIndex >= 0 && selectedImage) {
       setSelectedImage(allImages[currentImageIndex]);
     }
   }, [currentImageIndex, allImages]);
+
+  // Reset modal state when category changes
+  useEffect(() => {
+    setSelectedImage(null);
+    setCurrentImageIndex(0);
+  }, [activeCategory]);
 
   return (
     <section className="max-w-6xl mx-auto mt-24 py-10 px-4">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-6" style={{ color: '#B3BD31' }}>Our Projects</h2>
         <div className="w-24 h-1 bg-gray-300 mx-auto mb-8"></div>
-        
+
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {categories.map(category => (
             <button
               key={category.id}
               onClick={() => setActiveCategory(category.id)}
-              className={`px-4 py-2 rounded-full transition-colors ${
-                activeCategory === category.id
+              className={`px-4 py-2 rounded-full transition-colors ${activeCategory === category.id
                 ? 'bg-[#B3BD31] text-white'
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-              }`}
+                }`}
             >
               {category.name}
             </button>
           ))}
         </div>
       </div>
-      
-      {/* Architecture Projects */}
+
+      {/* Architecture Projects with Rotating Row */}
       {activeCategory === 'architecture' && (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.architecture.map(project => (
-            <div 
-              key={project.id} 
-              className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onClick={() => openImageModal(project)}
-            >
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-                />
+        <div className="relative w-full overflow-hidden">
+          {/* Left Vignette */}
+          <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
+
+          {/* Right Vignette */}
+          <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+          <motion.div
+            className="flex space-x-6 py-4"
+            animate={!isArchHovered ? {
+              x: [0, -1400]
+            } : {}}
+            transition={{
+              x: {
+                duration: 25,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear"
+              }
+            }}
+            onMouseEnter={() => setIsArchHovered(true)}
+            onMouseLeave={() => setIsArchHovered(false)}
+          >
+            {[...projects.architecture, ...projects.architecture].map((project, index) => (
+              <div
+                key={`arch-${project.id}-${index}`}
+                className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => openImageModal(project)}
+              >
+                <div className="h-64 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>{project.title}</h3>
+                  <p className="text-gray-700">{project.description}</p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>{project.title}</h3>
-                <p className="text-gray-700">{project.description}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </motion.div>
         </div>
       )}
-      
+
       {/* Interior Projects with Rotating Rows */}
       {activeCategory === 'interior' && (
         <div className="space-y-12">
@@ -290,15 +322,15 @@ const Projects = () => {
             <div className="relative w-full overflow-hidden">
               {/* Left Vignette */}
               <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
-              
+
               {/* Right Vignette */}
               <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
-              
-              <motion.div 
+
+              <motion.div
                 className="flex space-x-6 py-4"
-                animate={{
+                animate={!isResHovered ? {
                   x: [0, -1200]
-                }}
+                } : {}}
                 transition={{
                   x: {
                     duration: 20,
@@ -307,18 +339,20 @@ const Projects = () => {
                     ease: "linear"
                   }
                 }}
+                onMouseEnter={() => setIsResHovered(true)}
+                onMouseLeave={() => setIsResHovered(false)}
               >
                 {[...projects.interior.residential, ...projects.interior.residential].map((project, index) => (
-                  <div 
-                    key={`res-${project.id}-${index}`} 
+                  <div
+                    key={`res-${project.id}-${index}`}
                     className="flex-shrink-0 w-72 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                     onClick={() => openImageModal(project)}
                   >
                     <div className="h-48 overflow-hidden">
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </div>
                     <div className="p-4">
@@ -330,22 +364,22 @@ const Projects = () => {
               </motion.div>
             </div>
           </div>
-          
+
           {/* Commercial Row - Auto Scrolling in Opposite Direction */}
           <div>
             <h3 className="text-2xl font-semibold mb-4 text-gray-800">Commercial Interiors</h3>
             <div className="relative w-full overflow-hidden">
               {/* Left Vignette */}
               <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
-              
+
               {/* Right Vignette */}
               <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
-              
-              <motion.div 
+
+              <motion.div
                 className="flex space-x-6 py-4"
-                animate={{
+                animate={!isComHovered ? {
                   x: [-1200, 0]
-                }}
+                } : {}}
                 transition={{
                   x: {
                     duration: 20,
@@ -354,18 +388,20 @@ const Projects = () => {
                     ease: "linear"
                   }
                 }}
+                onMouseEnter={() => setIsComHovered(true)}
+                onMouseLeave={() => setIsComHovered(false)}
               >
                 {[...projects.interior.commercial, ...projects.interior.commercial].map((project, index) => (
-                  <div 
-                    key={`com-${project.id}-${index}`} 
+                  <div
+                    key={`com-${project.id}-${index}`}
                     className="flex-shrink-0 w-72 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                     onClick={() => openImageModal(project)}
                   >
                     <div className="h-48 overflow-hidden">
-                      <img 
-                        src={project.image} 
-                        alt={project.title} 
-                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                       />
                     </div>
                     <div className="p-4">
@@ -379,36 +415,59 @@ const Projects = () => {
           </div>
         </div>
       )}
-      
-      {/* Urban Projects */}
+
+      {/* Urban Projects with Rotating Row */}
       {activeCategory === 'urban' && (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.urban.map(project => (
-            <div 
-              key={project.id} 
-              className="group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-              onClick={() => openImageModal(project)}
-            >
-              <div className="h-64 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-                />
+        <div className="relative w-full overflow-hidden">
+          {/* Left Vignette */}
+          <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10"></div>
+
+          {/* Right Vignette */}
+          <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+          <motion.div
+            className="flex space-x-6 py-4"
+            animate={!isUrbanHovered ? {
+              x: [-900, 0]
+            } : {}}
+            transition={{
+              x: {
+                duration: 15,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "linear"
+              }
+            }}
+            onMouseEnter={() => setIsUrbanHovered(true)}
+            onMouseLeave={() => setIsUrbanHovered(false)}
+          >
+            {[...projects.urban, ...projects.urban, ...projects.urban].map((project, index) => (
+              <div
+                key={`urban-${project.id}-${index}`}
+                className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => openImageModal(project)}
+              >
+                <div className="h-64 overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>{project.title}</h3>
+                  <p className="text-gray-700">{project.description}</p>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2" style={{ color: '#B3BD31' }}>{project.title}</h3>
-                <p className="text-gray-700">{project.description}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </motion.div>
         </div>
       )}
-      
+
       {/* Image Modal */}
       <AnimatePresence>
         {selectedImage && (
-          <motion.div 
+          <motion.div
             className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -417,7 +476,7 @@ const Projects = () => {
           >
             <div className="relative max-w-4xl w-full max-h-[90vh]" onClick={e => e.stopPropagation()}>
               {/* Close button */}
-              <button 
+              <button
                 className="absolute right-0 top-0 bg-white rounded-full p-2 transform translate-x-1/2 -translate-y-1/2 z-10"
                 onClick={closeImageModal}
               >
@@ -425,9 +484,9 @@ const Projects = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-              
+
               {/* Image container */}
-              <motion.div 
+              <motion.div
                 className="bg-white rounded-lg overflow-hidden shadow-2xl"
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -435,16 +494,16 @@ const Projects = () => {
                 transition={{ duration: 0.3 }}
               >
                 <div className="relative h-[80vh]">
-                  <img 
-                    src={selectedImage.image} 
-                    alt={selectedImage.title} 
+                  <img
+                    src={selectedImage.image}
+                    alt={selectedImage.title}
                     className="w-full h-full object-contain"
                   />
                 </div>
               </motion.div>
-              
+
               {/* Navigation buttons */}
-              <button 
+              <button
                 className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-lg"
                 onClick={(e) => { e.stopPropagation(); prevImage(); }}
               >
@@ -452,8 +511,8 @@ const Projects = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
-              
-              <button 
+
+              <button
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-3 shadow-lg"
                 onClick={(e) => { e.stopPropagation(); nextImage(); }}
               >
