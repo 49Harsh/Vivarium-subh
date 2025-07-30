@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ProjectDetailModal from '../components/ProjectDetailModal';
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('architecture');
@@ -207,34 +208,25 @@ const Projects = () => {
     setAllImages(images);
   }, [activeCategory]);
 
-  // Open image modal
-  const openImageModal = (image) => {
-    setSelectedImage(image);
-    const index = allImages.findIndex(img => img.image === image.image);
+  // Open detailed project modal
+  const openProjectDetail = (project) => {
+    setSelectedImage(project);
+    const index = allImages.findIndex(img => img.image === project.image);
     setCurrentImageIndex(index);
   };
 
-  // Close image modal
-  const closeImageModal = () => {
+  // Close detailed project modal
+  const closeProjectDetail = () => {
     setSelectedImage(null);
   };
 
-  // Navigate to next image
-  const nextImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % allImages.length);
-  };
-
-  // Navigate to previous image
-  const prevImage = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + allImages.length) % allImages.length);
-  };
-
-  // Update selected image when currentImageIndex changes
-  useEffect(() => {
-    if (allImages.length > 0 && currentImageIndex >= 0 && selectedImage) {
-      setSelectedImage(allImages[currentImageIndex]);
+  // Navigate to different project
+  const navigateToProject = (newIndex) => {
+    if (allImages.length > 0 && newIndex >= 0 && newIndex < allImages.length) {
+      setCurrentImageIndex(newIndex);
+      setSelectedImage(allImages[newIndex]);
     }
-  }, [currentImageIndex, allImages]);
+  };
 
   // Reset modal state when category changes
   useEffect(() => {
@@ -294,7 +286,7 @@ const Projects = () => {
               <div
                 key={`arch-${project.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-                onClick={() => openImageModal(project)}
+                onClick={() => openProjectDetail(project)}
               >
                 <div className="h-64 overflow-hidden">
                   <img
@@ -346,7 +338,7 @@ const Projects = () => {
                   <div
                     key={`res-${project.id}-${index}`}
                     className="flex-shrink-0 w-72 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-                    onClick={() => openImageModal(project)}
+                    onClick={() => openProjectDetail(project)}
                   >
                     <div className="h-48 overflow-hidden">
                       <img
@@ -395,7 +387,7 @@ const Projects = () => {
                   <div
                     key={`com-${project.id}-${index}`}
                     className="flex-shrink-0 w-72 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-                    onClick={() => openImageModal(project)}
+                    onClick={() => openProjectDetail(project)}
                   >
                     <div className="h-48 overflow-hidden">
                       <img
@@ -445,7 +437,7 @@ const Projects = () => {
               <div
                 key={`urban-${project.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
-                onClick={() => openImageModal(project)}
+                onClick={() => openProjectDetail(project)}
               >
                 <div className="h-64 overflow-hidden">
                   <img
@@ -464,66 +456,15 @@ const Projects = () => {
         </div>
       )}
 
-      {/* Image Modal */}
-      <AnimatePresence>
-        {selectedImage && (
-          <motion.div
-            className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={closeImageModal}
-          >
-            <div className="relative max-w-4xl w-full max-h-[90vh]" onClick={e => e.stopPropagation()}>
-              {/* Close button */}
-              <button
-                className="absolute right-0 top-0 bg-white rounded-full p-2 transform translate-x-1/2 -translate-y-1/2 z-10"
-                onClick={closeImageModal}
-              >
-                <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-
-              {/* Image container */}
-              <motion.div
-                className="bg-white rounded-lg overflow-hidden shadow-2xl"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="relative h-[80vh]">
-                  <img
-                    src={selectedImage.image}
-                    alt={selectedImage.title}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-              </motion.div>
-
-              {/* Navigation buttons */}
-              <button
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-white rounded-full p-3 shadow-lg"
-                onClick={(e) => { e.stopPropagation(); prevImage(); }}
-              >
-                <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              <button
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 bg-white rounded-full p-3 shadow-lg"
-                onClick={(e) => { e.stopPropagation(); nextImage(); }}
-              >
-                <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Detailed Project Modal */}
+      <ProjectDetailModal
+        project={selectedImage}
+        isOpen={!!selectedImage}
+        onClose={closeProjectDetail}
+        allProjects={allImages}
+        currentIndex={currentImageIndex}
+        onNavigate={navigateToProject}
+      />
     </section>
   );
 };
