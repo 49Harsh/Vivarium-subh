@@ -99,9 +99,6 @@ const ImageSlider = () => {
                     <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow-md">
                         Creating innovative architectural solutions that transform spaces and inspire lives
                     </p>
-                    <button className="bg-[#B3BD31] hover:bg-[#9da728] text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300 shadow-lg">
-                        Explore Our Work
-                    </button>
                 </div>
             </div>
 

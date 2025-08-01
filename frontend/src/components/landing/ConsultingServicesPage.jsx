@@ -189,7 +189,7 @@ const ConsultingServicesPage = () => {
           "/hero-image/Picture5.jpg"
         ],
         category: "Architecture",
-        stats: { projects: "50+", years: "10+" }
+        stats: { projects: "5+", years: "5+" }
       },
       {
         id: 2,
@@ -203,7 +203,7 @@ const ConsultingServicesPage = () => {
           "/INTERIOR PROJECTS (COMMERCIAL)/Picture16.jpg"
         ],
         category: "Interior",
-        stats: { projects: "30+", years: "8+" }
+        stats: { projects: "5+", years: "5+" }
       },
       {
         id: 3,
@@ -216,7 +216,7 @@ const ConsultingServicesPage = () => {
           "/PROJECTS- URBAN PROJECTS/Picture21.jpg"
         ],
         category: "Urban",
-        stats: { projects: "20+", years: "12+" }
+        stats: { projects: "5+", years: "5+" }
       }
     ];
 
@@ -596,16 +596,7 @@ const ConsultingServicesPage = () => {
         </div>
 
         {/* Call to Action */}
-        <AnimatedSection animation={fadeInUp} className="text-center mt-16">
-          <motion.button
-            className="px-8 py-3 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-            style={{ backgroundColor: '#B3BD31' }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Get Consultation
-          </motion.button>
-        </AnimatedSection>
+       
       </div>
     </div>
   );

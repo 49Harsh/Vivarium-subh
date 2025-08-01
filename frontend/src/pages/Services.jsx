@@ -66,7 +66,7 @@ const Services = () => {
       description: "Professional architectural design services for residential, commercial, and institutional projects, focusing on functionality and aesthetics.",
       features: ["Concept Development", "Design Documentation", "Material Selection", "Construction Drawings"],
       image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: "�️"
+      icon: "🏛️"
     },
     {
       id: 3,
@@ -75,7 +75,7 @@ const Services = () => {
       description: "Comprehensive interior design services tailored to create functional and beautiful spaces that reflect your vision and requirements.",
       features: ["Space Planning", "Material Selection", "Furniture Layout", "Color Consultation"],
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: "�"
+      icon: "🛋️"
     },
     {
       id: 4,
@@ -83,7 +83,7 @@ const Services = () => {
       subtitle: "End-to-End Coordination",
       description: "Complete project oversight from planning to execution, ensuring timely delivery and quality standards throughout the construction process.",
       features: ["Timeline Management", "Cost Control", "Quality Assurance", "Contractor Coordination"],
-      image: "https://www.freepik.com/free-photo/still-life-business-roles-with-various-mechanism-pieces_24749607.htm#fromView=keyword&page=1&position=3&uuid=89716628-ed08-45e2-bda0-b1261c708c3a&query=Project+Management",
+      image: "https://plus.unsplash.com/premium_photo-1725400817468-ddb0135d865d?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       icon: "⚙️"
     },
     {
@@ -101,42 +101,11 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      {/* <AnimatedSection animation={fadeInUp} className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-24">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Our <span style={{ color: '#B3BD31' }}>Services</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Comprehensive architectural and design solutions that transform spaces and create lasting impressions
-          </p>
-          <div className="mt-12">
-            <Link to="/contact">
-              <motion.button
-                className="px-8 py-4 bg-[#B3BD31] text-white font-semibold rounded-full text-lg hover:bg-[#9CAD28] transition-all duration-300 shadow-lg hover:shadow-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Get Started Today
-              </motion.button>
-            </Link>
-          </div>
-        </div>
-      </AnimatedSection> */}
+      
 
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          {/* <AnimatedSection animation={fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              What We <span style={{ color: '#B3BD31' }}>Offer</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From concept to completion, we provide comprehensive architectural and design services tailored to your unique needs
-            </p>
-          </AnimatedSection> */}
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <AnimatedSection
@@ -183,114 +152,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      {/* <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection animation={fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Our <span style={{ color: '#B3BD31' }}>Process</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A systematic approach to delivering exceptional results on every project
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index) => (
-              <AnimatedSection
-                key={index}
-                animation={fadeInLeft}
-                className="text-center"
-              >
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                  <div className="text-6xl mb-4">{step.icon}</div>
-                  <div className="text-4xl font-bold text-[#B3BD31] mb-4">{step.step}</div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">{step.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* Testimonials Section */}
-      {/* <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <AnimatedSection animation={fadeInUp} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              What Our <span style={{ color: '#B3BD31' }}>Clients Say</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from our satisfied clients
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedSection
-                key={index}
-                animation={fadeInUp}
-                className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-center mb-6">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover mr-4"
-                  />
-                  <div>
-                    <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                  </div>
-                </div>
-                <p className="text-gray-700 leading-relaxed italic">"{testimonial.content}"</p>
-                <div className="flex mt-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/>
-                    </svg>
-                  ))}
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
-      {/* CTA Section */}
-      {/* <section className="py-20 bg-gradient-to-r from-[#B3BD31] to-[#9CAD28] text-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <AnimatedSection animation={fadeInUp}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Let's discuss how we can bring your vision to life with our expert services
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <motion.button
-                  className="px-8 py-4 bg-white text-[#B3BD31] font-semibold rounded-full text-lg hover:bg-gray-100 transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Free Consultation
-                </motion.button>
-              </Link>
-              <Link to="/projects">
-                <motion.button
-                  className="px-8 py-4 border-2 border-white text-white font-semibold rounded-full text-lg hover:bg-white hover:text-[#B3BD31] transition-all duration-300"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View Our Portfolio
-                </motion.button>
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section> */}
     </div>
   );
 };
