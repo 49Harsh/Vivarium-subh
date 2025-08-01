@@ -10,9 +10,7 @@ const Footer = () => (
         <div className="col-span-1 md:col-span-1 lg:col-span-1">
           <h3 className="text-xl font-bold mb-6">Vivarium Design Studio</h3>
           <p className="text-white/90 mb-6 text-sm leading-relaxed">
-            Founded in 2021, Vivarium Design Studio specializes in architectural design, 
-            building permits, and interior design with a client-centric approach to deliver 
-            innovative solutions.
+          Founded in 2021, Vivarium Design Studio is specialized in architectural design, building permits, and interior design with a client-centric approach to deliver innovative solutions
           </p>
           <div className="flex space-x-4">
             {/* Social Media Icons */}
