@@ -22,122 +22,74 @@ const Projects = () => {
     architecture: [
       {
         id: 1,
-        title: 'Modern Residential Complex',
-        image: '/hero-image/Picture1.jpg',
-        description: 'Luxury residential complex with modern design elements.'
+        title: 'Town House',
+        image: '/New folder/Town House.png',
+        description: 'Residential project in Munich, Germany with G+3 configuration and pent house.'
       },
       {
         id: 2,
-        title: 'Contemporary Villa',
-        image: '/hero-image/Picture3.jpg',
-        description: 'Contemporary villa with minimalist architectural approach.'
+        title: 'Maurya Heights',
+        image: '/New folder/Maurya Heights.jpg',
+        description: 'Residential complex in Nashik with G+7 configuration and 2 BHK apartments.'
       },
       {
         id: 3,
-        title: 'Sustainable Housing',
-        image: '/hero-image/Picture4.jpg',
-        description: 'Eco-friendly housing project with sustainable features.'
+        title: 'Triplet Bungalow',
+        image: '/New folder/Triplet Bungalow.jpg',
+        description: 'Luxury triplet bungalow project in Munich, Germany.'
       },
       {
         id: 4,
-        title: 'Urban Residence',
-        image: '/hero-image/Picture5.jpg',
-        description: 'Modern urban residence with innovative design solutions.'
+        title: "Pooja's Niwas",
+        image: "/New folder/Pooja's Niwas.jpg",
+        description: '5 BHK Bungalow in Muzaffarpur with G+1 configuration.'
       },
       {
         id: 5,
-        title: 'Luxury Apartment Complex',
-        image: '/hero-image/Picture6.jpg',
-        description: 'High-end apartment complex with premium amenities.'
+        title: 'Villa Eichleite',
+        image: '/New folder/Villa Eichleite.jpg',
+        description: 'Luxurious villa project in Munich with G+2 configuration.'
       },
       {
         id: 6,
-        title: 'Commercial Building',
-        image: '/hero-image/Picture7.jpg',
-        description: 'Commercial building with contemporary architectural style.'
-      },
-      {
-        id: 7,
-        title: 'Mixed-Use Development',
-        image: '/hero-image/Picture8.jpg',
-        description: 'Mixed-use development combining residential and commercial spaces.'
+        title: 'Yadav Enclave',
+        image: '/New folder/Yadav Enclave.jpg',
+        description: '6BHK Cluster Bungalows in Gorakhpur with G+2 configuration.'
       }
     ],
 
     // Interior Projects
     interior: {
-      residential: [
+      commercial: [
+        {
+          id: 7,
+          title: 'YES Germany - Andheri',
+          type: 'commercial',
+          image: '/interior/YES Germany-1.jpg',
+          description: 'Commercial office space interior in Andheri, Mumbai.'
+        },
         {
           id: 8,
-          title: 'Luxury Home Interior',
-          type: 'residential',
-          image: '/Interior_Project/Picture9.jpg',
-          description: 'Modern, functional, and aesthetic interiors for luxury home.'
+          title: 'Spiceland Restaurant',
+          type: 'commercial',
+          image: '/interior/Spiceland-1.jpg',
+          description: 'Restaurant interior project in Muzaffarpur, Bihar.'
         },
         {
           id: 9,
-          title: 'Apartment Renovation',
-          type: 'residential',
-          image: '/Interior_Project/Picture10.jpg',
-          description: 'Complete renovation of apartment with modern interiors.'
-        },
-        {
-          id: 10,
-          title: 'Minimalist Home Design',
-          type: 'residential',
-          image: '/Interior_Project/Picture11.jpg',
-          description: 'Clean, minimalist interior design for contemporary home.'
-        },
-        {
-          id: 11,
-          title: 'Villa Interior',
-          type: 'residential',
-          image: '/Interior_Project/Picture12.jpg',
-          description: 'Elegant interior design for spacious villa.'
+          title: 'YES Germany - Belapur',
+          type: 'commercial',
+          image: '/interior/YES Germany-Belapur-1.jpg',
+          description: 'Commercial office space interior in Belapur, Mumbai.'
         }
       ],
-      commercial: [
+      residential: [
         {
-          id: 12,
-          title: 'Corporate Office',
-          type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture13.jpg',
-          description: 'Innovative and efficient commercial office space.'
-        },
-        {
-          id: 13,
-          title: 'Retail Store Design',
-          type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture14.jpg',
-          description: 'Modern retail store with unique shopping experience.'
-        },
-        {
-          id: 14,
-          title: 'Restaurant Interior',
-          type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture15.jpg',
-          description: 'Stylish restaurant interior with comfortable dining atmosphere.'
-        },
-        {
-          id: 15,
-          title: 'Hotel Lobby Design',
-          type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture16.jpg',
-          description: 'Elegant hotel lobby with welcoming ambiance.'
-        },
-        {
-          id: 16,
-          title: 'Co-working Space',
-          type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture17.jpg',
-          description: 'Modern co-working space designed for productivity and collaboration.'
-        },
-        {
-          id: 17,
-          title: 'Conference Center',
-          type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture18.jpg',
-          description: 'State-of-the-art conference center with versatile meeting spaces.'
+          id: 10,
+          title: 'Abu Niwas',
+          type: 'residential',
+          image: '/interior/Abu Niwas-1.jpg',
+          description: 'Residential interior project in Purnia, Bihar.'
         }
       ]
     },
@@ -145,22 +97,16 @@ const Projects = () => {
     // Urban Projects
     urban: [
       {
-        id: 18,
-        title: 'Urban Housing Development',
-        image: '/PROJECTS- URBAN PROJECTS/Picture19.jpg',
-        description: 'Urban housing development with sustainable features.'
+        id: 11,
+        title: 'Smart City Junction Design (Hathi Chowk)',
+        image: '/urban/SCJD-Hathi Chowk-1.jpg',
+        description: 'Junction design project in Muzaffarpur covering 525 sq. m.'
       },
       {
-        id: 19,
-        title: 'City Master Plan',
-        image: '/PROJECTS- URBAN PROJECTS/Picture20.jpg',
-        description: 'Comprehensive master plan for urban development.'
-      },
-      {
-        id: 20,
-        title: 'Public Space Renovation',
-        image: '/PROJECTS- URBAN PROJECTS/Picture21.jpg',
-        description: 'Renovation of public spaces with modern amenities and green areas.'
+        id: 12,
+        title: 'Smart City Junction Design (Mithanpura Chowk)',
+        image: '/urban/SCJD-Mithanpura Chowk-1.jpg',
+        description: 'Junction design project in Muzaffarpur covering 479 sq. m.'
       }
     ]
   };

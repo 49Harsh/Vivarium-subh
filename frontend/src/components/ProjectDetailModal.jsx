@@ -16,196 +16,137 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
 
   // Sample project details data - you can expand this
   const projectDetails = {
-    'Modern Residential Complex': {
-      location: 'Mumbai, Maharashtra',
-      area: '25,000 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Priya Sharma',
-      client: 'ABC Developers',
-      year: '2023',
-      description: 'A luxury residential complex featuring modern amenities, sustainable design, and premium finishes. The project includes 50 units with state-of-the-art facilities.'
-    },
-    'Contemporary Villa': {
-      location: 'Pune, Maharashtra',
-      area: '8,500 sq.ft.',
+    'Town House': {
+      location: 'Munich, Germany',
+      area: '1484.94 sq. m.',
       status: 'Under Construction',
-      team: 'Rohit Walimbe, Amit Patel',
-      client: 'Private Client',
-      year: '2024',
-      description: 'Contemporary villa with minimalist architectural approach, featuring clean lines, open spaces, and natural materials.'
+      projectType: 'Residential',
+      floors: 'G+3',
+      configuration: 'Pent House',
+      possessionDate: '2026',
+      year: '2026'
     },
-    'Sustainable Housing': {
-      location: 'Bangalore, Karnataka',
-      area: '15,000 sq.ft.',
+    'Maurya Heights': {
+      location: 'Nashik, India',
+      area: '5109.66 sq. m.',
+      siteArea: '1152 sq. m.',
       status: 'Completed',
-      team: 'Rohit Walimbe, Neha Singh',
-      client: 'Green Homes Ltd',
-      year: '2023',
-      description: 'Eco-friendly housing project with sustainable features including solar panels, rainwater harvesting, and green building materials.'
+      projectType: 'Residential',
+      floors: 'G+7',
+      configuration: '2 BHK',
+      possessionDate: '2024',
+      year: '2024'
     },
-    'Urban Residence': {
-      location: 'Delhi, NCR',
-      area: '6,200 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Rajesh Kumar',
-      client: 'Urban Living',
-      year: '2023',
-      description: 'Modern urban residence with innovative design solutions, maximizing space efficiency and natural light.'
-    },
-    'Luxury Apartment Complex': {
-      location: 'Hyderabad, Telangana',
-      area: '45,000 sq.ft.',
+    'Triplet Bungalow': {
+      location: 'Munich, Germany',
+      area: '5414 sq. m.',
+      siteArea: '859 sq. m.',
       status: 'Under Construction',
-      team: 'Rohit Walimbe, Deepak Verma',
-      client: 'Luxury Developers',
-      year: '2024',
-      description: 'High-end apartment complex with premium amenities including swimming pool, gym, and landscaped gardens.'
+      projectType: 'Residential',
+      floors: 'G+1',
+      configuration: 'Triplet Bungalow',
+      possessionDate: '2026',
+      year: '2026'
     },
-    'Commercial Building': {
-      location: 'Chennai, Tamil Nadu',
-      area: '18,000 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Kavya Reddy',
-      client: 'Tech Corp',
-      year: '2023',
-      description: 'Commercial building with contemporary architectural style, designed for modern office spaces and retail outlets.'
-    },
-    'Mixed-Use Development': {
-      location: 'Ahmedabad, Gujarat',
-      area: '35,000 sq.ft.',
+    "Pooja's Niwas": {
+      location: 'Muzaffarpur, India',
+      area: '385.52 sq. m.',
+      siteArea: '190 sq. m.',
       status: 'Under Construction',
-      team: 'Rohit Walimbe, Meera Shah',
-      client: 'Metro Developers',
-      year: '2024',
-      description: 'Mixed-use development combining residential and commercial spaces with integrated amenities and smart city features.'
+      projectType: 'Residential',
+      floors: 'G+1',
+      configuration: '5 BHK Bungalow',
+      possessionDate: '2024',
+      year: '2024'
     },
-    'Luxury Home Interior': {
-      location: 'Mumbai, Maharashtra',
-      area: '4,500 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Anjali Desai',
-      client: 'Private Client',
-      year: '2023',
-      description: 'Modern, functional, and aesthetic interiors for luxury home with premium finishes and custom furniture.'
-    },
-    'Apartment Renovation': {
-      location: 'Pune, Maharashtra',
-      area: '2,800 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Suresh Iyer',
-      client: 'Private Client',
-      year: '2023',
-      description: 'Complete renovation of apartment with modern interiors, maximizing space and creating a contemporary living environment.'
-    },
-    'Minimalist Home Design': {
-      location: 'Bangalore, Karnataka',
-      area: '3,200 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Priya Rao',
-      client: 'Private Client',
-      year: '2023',
-      description: 'Clean, minimalist interior design for contemporary home with focus on functionality and aesthetic appeal.'
-    },
-    'Villa Interior': {
-      location: 'Goa, India',
-      area: '6,500 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Maria Fernandes',
-      client: 'Private Client',
-      year: '2023',
-      description: 'Elegant interior design for spacious villa with tropical influences and luxury finishes.'
-    },
-    'Corporate Office': {
-      location: 'Mumbai, Maharashtra',
-      area: '12,000 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Vikram Mehta',
-      client: 'Tech Solutions Inc',
-      year: '2023',
-      description: 'Innovative and efficient commercial office space designed for productivity and employee well-being.'
-    },
-    'Retail Store Design': {
-      location: 'Delhi, NCR',
-      area: '3,500 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Ritu Sharma',
-      client: 'Fashion Retail',
-      year: '2023',
-      description: 'Modern retail store with unique shopping experience, featuring innovative display systems and customer-friendly layout.'
-    },
-    'Restaurant Interior': {
-      location: 'Pune, Maharashtra',
-      area: '4,200 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Chef Arjun',
-      client: 'Fine Dining Restaurant',
-      year: '2023',
-      description: 'Stylish restaurant interior with comfortable dining atmosphere, featuring warm lighting and elegant decor.'
-    },
-    'Hotel Lobby Design': {
-      location: 'Jaipur, Rajasthan',
-      area: '8,000 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Maharani Hotels',
-      client: 'Heritage Hotels',
-      year: '2023',
-      description: 'Elegant hotel lobby with welcoming ambiance, blending traditional Rajasthani elements with modern luxury.'
-    },
-    'Co-working Space': {
-      location: 'Bangalore, Karnataka',
-      area: '15,000 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Startup Hub',
-      client: 'Innovation Workspace',
-      year: '2023',
-      description: 'Modern co-working space designed for productivity and collaboration, featuring flexible work areas and meeting rooms.'
-    },
-    'Conference Center': {
-      location: 'Hyderabad, Telangana',
-      area: '20,000 sq.ft.',
-      status: 'Completed',
-      team: 'Rohit Walimbe, Event Corp',
-      client: 'Business Events Ltd',
-      year: '2023',
-      description: 'State-of-the-art conference center with versatile meeting spaces, advanced audio-visual systems, and modern amenities.'
-    },
-    'Urban Housing Development': {
-      location: 'Mumbai, Maharashtra',
-      area: '50,000 sq.ft.',
+    'Villa Eichleite': {
+      location: 'Munich, Germany',
+      area: '5414 sq. m.',
+      siteArea: '859 sq. m.',
       status: 'Under Construction',
-      team: 'Rohit Walimbe, Urban Planners',
-      client: 'City Development Authority',
-      year: '2024',
-      description: 'Urban housing development with sustainable features, green spaces, and community amenities.'
+      projectType: 'Residential',
+      floors: 'G+2',
+      configuration: 'Villa',
+      possessionDate: '2025',
+      year: '2025'
     },
-    'City Master Plan': {
-      location: 'Smart City Project',
-      area: '500,000 sq.ft.',
-      status: 'Planning Phase',
-      team: 'Rohit Walimbe, Urban Design Team',
-      client: 'Municipal Corporation',
-      year: '2024',
-      description: 'Comprehensive master plan for urban development including infrastructure, transportation, and sustainable city planning.'
+    'Yadav Enclave': {
+      location: 'Gorakhpur, Uttar Pradesh, India',
+      area: '2000 sq. m.',
+      siteArea: '2000 sq. m.',
+      status: 'Under Construction',
+      projectType: 'Residential',
+      floors: 'G+2',
+      configuration: '6BHK Cluster Bungalows',
+      possessionDate: '2025',
+      year: '2025'
     },
-    'Public Space Renovation': {
-      location: 'Public Park, City Center',
-      area: '25,000 sq.ft.',
+    'YES Germany-1': {
+      location: 'Andheri, Mumbai, India',
+      area: '1100 sq. ft.',
       status: 'Completed',
-      team: 'Rohit Walimbe, Landscape Architects',
-      client: 'Municipal Corporation',
-      year: '2023',
-      description: 'Renovation of public spaces with modern amenities and green areas, creating community gathering spaces.'
+      projectType: 'Commercial Interior',
+      configuration: 'Office Space',
+      possessionDate: '2024',
+      year: '2024'
+    },
+    'Spiceland-1': {
+      location: 'Muzaffarpur, Bihar, India',
+      area: '1489 sq. ft.',
+      status: 'Under Construction',
+      projectType: 'Hospitality Interior',
+      configuration: 'Restaurant',
+      possessionDate: '2025',
+      year: '2025'
+    },
+    'YES Germany-Belapur-1': {
+      location: 'Belapur, Mumbai, India',
+      area: '780 sq. ft.',
+      status: 'Completed',
+      projectType: 'Commercial Interior',
+      configuration: 'Office Space',
+      possessionDate: '2021',
+      year: '2021'
+    },
+    'Abu Niwas-1': {
+      location: 'Purnia, Bihar, India',
+      area: '820 sq. ft.',
+      status: 'Completed',
+      projectType: 'Residential Interior',
+      configuration: 'Interior',
+      possessionDate: '2024',
+      year: '2024'
+    },
+    'SCJD-Hathi Chowk-1': {
+      location: 'Muzaffarpur, Bihar, India',
+      area: '525 sq. m.',
+      status: 'Completed',
+      projectType: 'Urban Design',
+      configuration: 'Junction Design',
+      possessionDate: '2023',
+      year: '2023'
+    },
+    'SCJD-Mithanpura Chowk-1': {
+      location: 'Muzaffarpur, Bihar, India',
+      area: '479 sq. m.',
+      status: 'Completed',
+      projectType: 'Urban Design',
+      configuration: 'Junction Design',
+      possessionDate: '2023',
+      year: '2023'
     }
   };
 
   const details = projectDetails[project?.title] || {
     location: 'Location TBD',
     area: 'Area TBD',
+    siteArea: 'Site Area TBD',
     status: 'Status TBD',
-    team: 'Rohit Walimbe',
-    client: 'Client TBD',
-    year: '2024',
-    description: project?.description || 'Project description not available'
+    projectType: 'Project Type TBD',
+    floors: 'Floors TBD',
+    configuration: 'Configuration TBD',
+    possessionDate: 'TBD',
+    year: 'Year TBD'
   };
 
   // Create images array with different project images for navigation
@@ -301,27 +242,23 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
                   </div>
                 </div>
 
-                {/* Team and Client */}
+                {/* Project Type and Configuration */}
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Project Team</h3>
-                  <p className="text-gray-800 font-medium mb-4">{details.team}</p>
+                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Project Type</h3>
+                  <p className="text-gray-800 font-medium mb-4">{details.projectType}</p>
                   
-                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Client</h3>
-                  <p className="text-gray-800 font-medium">{details.client}</p>
+                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Configuration</h3>
+                  <p className="text-gray-800 font-medium">{details.configuration}</p>
                 </div>
 
-                {/* Detailed Description */}
+                {/* Additional Details */}
                 <div className="bg-white p-6 rounded-lg shadow-sm">
-                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Project Overview</h3>
-                  <p className="text-gray-700 leading-relaxed">{details.description}</p>
-                </div>
+                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Floors</h3>
+                  <p className="text-gray-800 font-medium mb-4">{details.floors}</p>
 
-                                 {/* Navigation Info */}
-                 <div className="bg-[#B3BD31] bg-opacity-10 p-4 rounded-lg">
-                   <p className="text-sm text-gray-600">
-                     <span className="font-semibold">Navigation:</span> Click on thumbnail images below to explore different projects
-                   </p>
-                 </div>
+                  <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">Possession Date</h3>
+                  <p className="text-gray-800 font-medium">{details.possessionDate}</p>
+                </div>
               </div>
             </div>
 
