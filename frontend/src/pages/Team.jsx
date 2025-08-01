@@ -13,7 +13,7 @@ const Team = () => (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {/* Ashish Sharma */}
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/Ashish sharma/Picture22.jpg" 
             alt="Ashish Sharma" 
@@ -31,9 +31,9 @@ const Team = () => (
       
       {/* Rashid Sikandar */}
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Team/Rashid Sikandar/Picture23.jpg" 
+            src="/Team/Rashid Sikandar/Picture6.jpg" 
             alt="Rashid Sikandar" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
           />
@@ -49,9 +49,9 @@ const Team = () => (
       
       {/* Alok Gupta */}
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Team/Alok Gupta/Picture24.png" 
+            src="/Team/Alok Gupta/Picture24.jpg" 
             alt="Alok Gupta" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
           />
@@ -67,9 +67,9 @@ const Team = () => (
       
       {/* Atul Kumar Yadav */}
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Client/Picture25.png" 
+            src="/Team/atul kumar.jpg" 
             alt="Atul Kumar Yadav" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
           />
@@ -85,9 +85,9 @@ const Team = () => (
       
       {/* Mohammad Ehsan */}
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
-        <div className="relative h-48 overflow-hidden">
+        <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Client/Picture26.png" 
+            src="/Team/ehsan.jpg" 
             alt="Mohammad Ehsan" 
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
           />
