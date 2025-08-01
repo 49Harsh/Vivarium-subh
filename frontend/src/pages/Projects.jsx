@@ -215,15 +215,19 @@ const Projects = () => {
           <motion.div
             className="flex space-x-6 py-4"
             animate={!isArchHovered ? {
-              x: [0, -1400]
+              x: ["0%", "-50%"]
             } : {}}
             transition={{
               x: {
-                duration: 25,
+                duration: 20,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "linear"
               }
+            }}
+            style={{
+              width: "fit-content",
+              display: "flex"
             }}
             onMouseEnter={() => setIsArchHovered(true)}
             onMouseLeave={() => setIsArchHovered(false)}
@@ -267,15 +271,19 @@ const Projects = () => {
               <motion.div
                 className="flex space-x-6 py-4"
                 animate={!isResHovered ? {
-                  x: [0, -1200]
+                  x: ["0%", "-50%"]
                 } : {}}
                 transition={{
                   x: {
-                    duration: 20,
+                    duration: 15,
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "linear"
                   }
+                }}
+                style={{
+                  width: "fit-content",
+                  display: "flex"
                 }}
                 onMouseEnter={() => setIsResHovered(true)}
                 onMouseLeave={() => setIsResHovered(false)}
@@ -316,15 +324,19 @@ const Projects = () => {
               <motion.div
                 className="flex space-x-6 py-4"
                 animate={!isComHovered ? {
-                  x: [-1200, 0]
+                  x: ["-50%", "0%"]
                 } : {}}
                 transition={{
                   x: {
-                    duration: 20,
+                    duration: 15,
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "linear"
                   }
+                }}
+                style={{
+                  width: "fit-content",
+                  display: "flex"
                 }}
                 onMouseEnter={() => setIsComHovered(true)}
                 onMouseLeave={() => setIsComHovered(false)}
@@ -366,7 +378,7 @@ const Projects = () => {
           <motion.div
             className="flex space-x-6 py-4"
             animate={!isUrbanHovered ? {
-              x: [-900, 0]
+              x: ["-50%", "0%"]
             } : {}}
             transition={{
               x: {
@@ -376,10 +388,14 @@ const Projects = () => {
                 ease: "linear"
               }
             }}
+            style={{
+              width: "fit-content",
+              display: "flex"
+            }}
             onMouseEnter={() => setIsUrbanHovered(true)}
             onMouseLeave={() => setIsUrbanHovered(false)}
           >
-            {[...projects.urban, ...projects.urban, ...projects.urban].map((project, index) => (
+            {[...projects.urban, ...projects.urban].map((project, index) => (
               <div
                 key={`urban-${project.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"

@@ -52,107 +52,52 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: "Architectural Design",
-      subtitle: "Innovative Building Solutions",
-      description: "Creating stunning architectural designs that blend aesthetics with functionality. From residential homes to commercial complexes, we deliver exceptional spaces that inspire and endure.",
-      features: ["3D Modeling & Visualization", "Sustainable Design", "Custom Solutions", "Project Management"],
-      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: "🏗️"
+      title: "Building Permits",
+      subtitle: "Legal Compliance & Approvals",
+      description: "We handle all aspects of building permit applications and processing, ensuring your project meets local regulations and standards.",
+      features: ["Document Preparation", "Application Processing", "Compliance Check", "Follow-up Support"],
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      icon: "📋"
     },
     {
       id: 2,
-      title: "Interior Design",
-      subtitle: "Transform Your Space",
-      description: "Elevate your living and working environments with our bespoke interior design services. We create harmonious spaces that reflect your personality and enhance your lifestyle.",
-      features: ["Space Planning", "Furniture Selection", "Color Schemes", "Lighting Design"],
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: "🎨"
+      title: "Architectural Design",
+      subtitle: "Creative Building Solutions",
+      description: "Professional architectural design services for residential, commercial, and institutional projects, focusing on functionality and aesthetics.",
+      features: ["Concept Development", "Design Documentation", "Material Selection", "Construction Drawings"],
+      image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      icon: "�️"
     },
     {
       id: 3,
-      title: "Urban Planning",
-      subtitle: "Sustainable City Development",
-      description: "Comprehensive urban planning solutions that create sustainable, livable communities. We design public spaces and infrastructure that enhance quality of life for residents.",
-      features: ["Master Planning", "Infrastructure Design", "Environmental Impact", "Community Engagement"],
-      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: "🏙️"
+      title: "Interior Design",
+      subtitle: "Space Planning & Aesthetics",
+      description: "Comprehensive interior design services tailored to create functional and beautiful spaces that reflect your vision and requirements.",
+      features: ["Space Planning", "Material Selection", "Furniture Layout", "Color Consultation"],
+      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      icon: "�"
     },
     {
       id: 4,
       title: "Project Management",
-      subtitle: "End-to-End Solutions",
-      description: "Complete project management services from concept to completion. We ensure seamless execution, timely delivery, and quality assurance throughout the project lifecycle.",
-      features: ["Timeline Management", "Budget Control", "Quality Assurance", "Stakeholder Coordination"],
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: "📋"
+      subtitle: "End-to-End Coordination",
+      description: "Complete project oversight from planning to execution, ensuring timely delivery and quality standards throughout the construction process.",
+      features: ["Timeline Management", "Cost Control", "Quality Assurance", "Contractor Coordination"],
+      image: "https://www.freepik.com/free-photo/still-life-business-roles-with-various-mechanism-pieces_24749607.htm#fromView=keyword&page=1&position=3&uuid=89716628-ed08-45e2-bda0-b1261c708c3a&query=Project+Management",
+      icon: "⚙️"
     },
     {
       id: 5,
-      title: "Consultation Services",
-      subtitle: "Expert Guidance",
-      description: "Professional consultation services providing strategic advice on architectural and design decisions. Our experts help you make informed choices for your projects.",
-      features: ["Strategic Planning", "Feasibility Studies", "Design Reviews", "Technical Support"],
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: "💡"
-    },
-    {
-      id: 6,
-      title: "3D Visualization",
-      subtitle: "Bring Ideas to Life",
-      description: "Photorealistic 3D visualization and rendering services that bring your architectural visions to life. Experience your project before it's built with our advanced visualization technology.",
-      features: ["3D Modeling", "Photorealistic Rendering", "Virtual Tours", "Animation Services"],
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: "🎬"
+      title: "NOC Approvals",
+      subtitle: "Regulatory Compliance",
+      description: "Expert assistance in obtaining various No Objection Certificates (NOCs) from relevant authorities for your construction projects.",
+      features: ["Documentation", "Authority Liaison", "Compliance Check", "Timely Processing"],
+      image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      icon: "✅"
     }
   ];
 
-  const processSteps = [
-    {
-      step: "01",
-      title: "Discovery & Consultation",
-      description: "We begin with a comprehensive consultation to understand your vision, requirements, and project goals.",
-      icon: "🔍"
-    },
-    {
-      step: "02",
-      title: "Concept Development",
-      description: "Our team creates initial concepts and design proposals tailored to your specific needs and preferences.",
-      icon: "✏️"
-    },
-    {
-      step: "03",
-      title: "Design Refinement",
-      description: "We refine and develop the chosen concept with detailed drawings, 3D visualizations, and technical specifications.",
-      icon: "🎯"
-    },
-    {
-      step: "04",
-      title: "Implementation",
-      description: "Our experienced team oversees the implementation process, ensuring quality and timely delivery.",
-      icon: "🚀"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Homeowner",
-      content: "The team transformed our vision into reality. Their attention to detail and professional approach exceeded our expectations.",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-    },
-    {
-      name: "Michael Chen",
-      role: "Business Owner",
-      content: "Outstanding service from start to finish. They delivered our commercial project on time and within budget.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Property Developer",
-      content: "Their urban planning expertise helped us create a sustainable community that residents love. Highly recommended!",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
-    }
-  ];
+  // Animation variants defined above
 
   return (
     <div className="min-h-screen bg-gray-50">
