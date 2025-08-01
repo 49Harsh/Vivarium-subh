@@ -41,7 +41,7 @@ const Projects = () => {
       {
         id: 4,
         title: "Pooja's Niwas",
-        image: "/New folder/Pooja's Niwas.jpg",
+        image: "/New folder/Pooja Niwas.jpg",
         description: '5 BHK Bungalow in Muzaffarpur with G+1 configuration.'
       },
       {
