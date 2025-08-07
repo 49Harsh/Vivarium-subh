@@ -171,10 +171,10 @@ const ConsultingServicesPage = () => {
         subtitle: "Modern Living Spaces",
         description: "Innovative residential designs that blend comfort with contemporary aesthetics, creating homes that inspire daily living. Our architectural expertise spans from luxury villas to modern residential complexes.",
         images: [
-          "/hero-image/Picture1.jpg",
-          "/hero-image/Picture3.jpg",
-          "/hero-image/Picture4.jpg",
-          "/hero-image/Picture5.jpg"
+          "/Projects/Architecture/Pooja Niwas/pooja.png",
+          "/Projects/Architecture/Triplet Bungalow/tb1.jpg",
+          "/Projects/Architecture/Maurya Heights/mh.jpg",
+          "/Projects/Architecture/Town House/VILLA CAM 1.jpg"
         ],
         category: "Architecture",
         stats: { projects: "5+", years: "5+" }
@@ -185,10 +185,10 @@ const ConsultingServicesPage = () => {
         subtitle: "Professional Workspaces",
         description: "Functional and inspiring commercial spaces designed to enhance productivity and create memorable brand experiences. From office spaces to commercial interiors, we transform environments.",
         images: [
-          "/INTERIOR PROJECTS (COMMERCIAL)/Picture13.jpg",
-          "/INTERIOR PROJECTS (COMMERCIAL)/Picture14.jpg",
-          "/INTERIOR PROJECTS (COMMERCIAL)/Picture15.jpg",
-          "/INTERIOR PROJECTS (COMMERCIAL)/Picture16.jpg"
+          "/Projects/Interior/Abu Niwas/an1.jpg",
+          "/Projects/Interior/Yes Germany, Belapur/3.jpeg",
+          "/Projects/Interior/Spiceland/sp.jpg",
+          "/Projects/Interior/Yes Germany, Andheri/1.jpg"
         ],
         category: "Interior",
         stats: { projects: "5+", years: "5+" }
@@ -199,9 +199,10 @@ const ConsultingServicesPage = () => {
         subtitle: "Community Planning",
         description: "Comprehensive urban planning solutions that create sustainable communities and enhance quality of life for residents. We design public spaces and urban developments that bring communities together.",
         images: [
-          "/PROJECTS- URBAN PROJECTS/Picture19.jpg",
-          "/PROJECTS- URBAN PROJECTS/Picture20.jpg",
-          "/PROJECTS- URBAN PROJECTS/Picture21.jpg"
+          "/Projects/Urban Projects//scj(mc)/1.jpg",
+          "/Projects/Urban Projects//scj(mc)/2.jpg",
+          "/Projects/Urban Projects/scj(hc)/1.jpg",
+          "/Projects/Urban Projects/scj(hc)/3.jpg"
         ],
         category: "Urban",
         stats: { projects: "5+", years: "5+" }

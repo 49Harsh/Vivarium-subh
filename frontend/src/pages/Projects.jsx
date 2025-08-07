@@ -66,21 +66,21 @@ const Projects = () => {
           id: 7,
           title: 'YES Germany - Andheri',
           type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture13.jpg',
+          image: '/Projects/Interior/Yes Germany, Andheri/1.jpg',
           description: 'Commercial office space interior in Andheri, Mumbai.'
         },
         {
           id: 8,
           title: 'Spiceland Restaurant',
           type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture14.jpg',
+          image: '/Projects/Interior/Spiceland/sp.jpg',
           description: 'Restaurant interior project in Muzaffarpur, Bihar.'
         },
         {
           id: 9,
           title: 'YES Germany - Belapur',
           type: 'commercial',
-          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture15.jpg',
+          image: '/Projects/Interior/Yes Germany, Belapur/3.jpeg',
           description: 'Commercial office space interior in Belapur, Mumbai.'
         }
       ],
