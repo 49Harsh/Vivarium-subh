@@ -16,7 +16,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
 
   // Sample project details data - you can expand this
   const projectDetails = {
-    'Town House': {
+    '/Projects/Architecture/Picture1.jpg': {
+      title: 'Town House',
       location: 'Munich, Germany',
       area: '1484.94 sq. m.',
       status: 'Under Construction',
@@ -26,7 +27,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2026',
       year: '2026'
     },
-    'Maurya Heights': {
+    '/Projects/Architecture/Picture2.jpg': {
+      title: 'Maurya Heights',
       location: 'Nashik, India',
       area: '5109.66 sq. m.',
       siteArea: '1152 sq. m.',
@@ -37,7 +39,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2024',
       year: '2024'
     },
-    'Triplet Bungalow': {
+    '/Projects/Architecture/Picture3.jpg': {
+      title: 'Triplet Bungalow',
       location: 'Munich, Germany',
       area: '5414 sq. m.',
       siteArea: '859 sq. m.',
@@ -48,7 +51,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2026',
       year: '2026'
     },
-    "Pooja's Niwas": {
+    '/Projects/Architecture/Picture4.jpg': {
+      title: "Pooja's Niwas",
       location: 'Muzaffarpur, India',
       area: '385.52 sq. m.',
       siteArea: '190 sq. m.',
@@ -59,7 +63,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2024',
       year: '2024'
     },
-    'Villa Eichleite': {
+    '/Projects/Architecture/Picture5.jpg': {
+      title: 'Villa Eichleite',
       location: 'Munich, Germany',
       area: '5414 sq. m.',
       siteArea: '859 sq. m.',
@@ -70,7 +75,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2025',
       year: '2025'
     },
-    'Yadav Enclave': {
+    '/Projects/Architecture/Picture6.jpg': {
+      title: 'Yadav Enclave',
       location: 'Gorakhpur, Uttar Pradesh, India',
       area: '2000 sq. m.',
       siteArea: '2000 sq. m.',
@@ -81,7 +87,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2025',
       year: '2025'
     },
-    'YES Germany-1': {
+    '/Projects/Interior/Commercial/Picture1.jpg': {
+      title: 'YES Germany - Andheri',
       location: 'Andheri, Mumbai, India',
       area: '1100 sq. ft.',
       status: 'Completed',
@@ -90,7 +97,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2024',
       year: '2024'
     },
-    'Spiceland-1': {
+    '/Projects/Interior/Commercial/Picture2.jpg': {
+      title: 'Spiceland Restaurant',
       location: 'Muzaffarpur, Bihar, India',
       area: '1489 sq. ft.',
       status: 'Under Construction',
@@ -99,7 +107,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2025',
       year: '2025'
     },
-    'YES Germany-Belapur-1': {
+    '/Projects/Interior/Commercial/Picture3.jpg': {
+      title: 'YES Germany - Belapur',
       location: 'Belapur, Mumbai, India',
       area: '780 sq. ft.',
       status: 'Completed',
@@ -108,7 +117,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2021',
       year: '2021'
     },
-    'Abu Niwas-1': {
+    '/Projects/Interior/Residential/Picture1.jpg': {
+      title: 'Abu Niwas',
       location: 'Purnia, Bihar, India',
       area: '820 sq. ft.',
       status: 'Completed',
@@ -117,7 +127,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2024',
       year: '2024'
     },
-    'SCJD-Hathi Chowk-1': {
+    '/Projects/Urban Projects/Picture1.jpg': {
+      title: 'Smart City Junction Design (Hathi Chowk)',
       location: 'Muzaffarpur, Bihar, India',
       area: '525 sq. m.',
       status: 'Completed',
@@ -126,7 +137,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2023',
       year: '2023'
     },
-    'SCJD-Mithanpura Chowk-1': {
+    '/Projects/Urban Projects/Picture2.jpg': {
+      title: 'Smart City Junction Design (Mithanpura Chowk)',
       location: 'Muzaffarpur, Bihar, India',
       area: '479 sq. m.',
       status: 'Completed',
@@ -137,7 +149,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
     }
   };
 
-  const details = projectDetails[project?.title] || {
+  const details = projectDetails[project?.image] || {
     location: 'Location TBD',
     area: 'Area TBD',
     siteArea: 'Site Area TBD',

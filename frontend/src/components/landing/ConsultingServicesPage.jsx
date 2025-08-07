@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import {motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
@@ -68,18 +68,6 @@ const ConsultingServicesPage = () => {
     initial: { opacity: 0, y: 80 },
     animate: { opacity: 1, y: 0 },
     transition: { duration: 1, ease: "easeOut" }
-  };
-
-  const fadeInLeft = {
-    initial: { opacity: 0, x: -100 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 1, delay: 0.2, ease: "easeOut" }
-  };
-
-  const fadeInRight = {
-    initial: { opacity: 0, x: 100 },
-    animate: { opacity: 1, x: 0 },
-    transition: { duration: 1, delay: 0.4, ease: "easeOut" }
   };
 
   // Section component with animation on scroll
@@ -289,7 +277,7 @@ const ConsultingServicesPage = () => {
 
                      {/* Swiper Gallery */}
            <div className="max-w-7xl mx-auto">
-             {projectData.map((project, projectIndex) => {
+             {projectData.map((project) => {
                const projectKey = project.title.toLowerCase().replace(/\s+/g, '');
                const currentSwiperState = swiperStates[projectKey] || { main: null, thumbs: null };
                

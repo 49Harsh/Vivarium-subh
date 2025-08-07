@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import ProjectDetailModal from '../components/ProjectDetailModal';
+import { motion } from 'framer-motion';
+
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('architecture');
@@ -23,37 +24,37 @@ const Projects = () => {
       {
         id: 1,
         title: 'Town House',
-        image: '/New folder/Town House.png',
+        image: '/Projects/Architecture/Town House/VILLA CAM 1.jpg',
         description: 'Residential project in Munich, Germany with G+3 configuration and pent house.'
       },
       {
         id: 2,
         title: 'Maurya Heights',
-        image: '/New folder/Maurya Heights.jpg',
+        image: '/Projects/Architecture/Maurya Heights/mh.jpg',
         description: 'Residential complex in Nashik with G+7 configuration and 2 BHK apartments.'
       },
       {
         id: 3,
         title: 'Triplet Bungalow',
-        image: '/New folder/Triplet Bungalow.jpg',
+        image: '/Projects/Architecture/Triplet Bungalow/tb1.jpg',
         description: 'Luxury triplet bungalow project in Munich, Germany.'
       },
       {
         id: 4,
         title: "Pooja's Niwas",
-        image: "/New folder/Pooja Niwas.jpg",
+        image: "/Projects/Architecture/Pooja Niwas/pooja.png",
         description: '5 BHK Bungalow in Muzaffarpur with G+1 configuration.'
       },
       {
         id: 5,
         title: 'Villa Eichleite',
-        image: '/New folder/Villa Eichleite.jpg',
+        image: '/Projects/Architecture/Villa Eichleite/ve.jpg',
         description: 'Luxurious villa project in Munich with G+2 configuration.'
       },
       {
         id: 6,
         title: 'Yadav Enclave',
-        image: '/New folder/Yadav Enclave.jpg',
+        image: '/Projects/Architecture/Yadav Enclave/ye.jpg',
         description: '6BHK Cluster Bungalows in Gorakhpur with G+2 configuration.'
       }
     ],
@@ -65,21 +66,21 @@ const Projects = () => {
           id: 7,
           title: 'YES Germany - Andheri',
           type: 'commercial',
-          image: '/interior/YES Germany-1.jpg',
+          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture13.jpg',
           description: 'Commercial office space interior in Andheri, Mumbai.'
         },
         {
           id: 8,
           title: 'Spiceland Restaurant',
           type: 'commercial',
-          image: '/interior/Spiceland-1.jpg',
+          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture14.jpg',
           description: 'Restaurant interior project in Muzaffarpur, Bihar.'
         },
         {
           id: 9,
           title: 'YES Germany - Belapur',
           type: 'commercial',
-          image: '/interior/YES Germany-Belapur-1.jpg',
+          image: '/INTERIOR PROJECTS (COMMERCIAL)/Picture15.jpg',
           description: 'Commercial office space interior in Belapur, Mumbai.'
         }
       ],
@@ -88,7 +89,7 @@ const Projects = () => {
           id: 10,
           title: 'Abu Niwas',
           type: 'residential',
-          image: '/interior/Abu Niwas-1.jpg',
+          image: '/Projects/Interior/Abu Niwas/an1.jpg',
           description: 'Residential interior project in Purnia, Bihar.'
         }
       ]
@@ -99,13 +100,13 @@ const Projects = () => {
       {
         id: 11,
         title: 'Smart City Junction Design (Hathi Chowk)',
-        image: '/urban/SCJD-Hathi Chowk-1.jpg',
+        image: '/Projects/Urban Projects/scj(hc)/1.jpg',
         description: 'Junction design project in Muzaffarpur covering 525 sq. m.'
       },
       {
         id: 12,
         title: 'Smart City Junction Design (Mithanpura Chowk)',
-        image: '/urban/SCJD-Mithanpura Chowk-1.jpg',
+        image: '/Projects/Urban Projects//scj(mc)/1.jpg',
         description: 'Junction design project in Muzaffarpur covering 479 sq. m.'
       }
     ]

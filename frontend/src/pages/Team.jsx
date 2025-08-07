@@ -15,9 +15,9 @@ const Team = () => (
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
         <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Team/Ashish sharma/Picture22.jpg" 
+            src="/Team/team/Ashish pic.jpg" 
             alt="Ashish Sharma" 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
@@ -33,9 +33,9 @@ const Team = () => (
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
         <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Team/Rashid Sikandar/Picture6.jpg" 
+            src="/Team/team/Rashid.jpg" 
             alt="Rashid Sikandar" 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
@@ -51,9 +51,9 @@ const Team = () => (
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
         <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Team/Alok Gupta/Picture24.jpg" 
+            src="/Team/team/Alok G.jpg" 
             alt="Alok Gupta" 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
@@ -69,9 +69,9 @@ const Team = () => (
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
         <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Team/atul kumar.jpg" 
+            src="/Team/team/atul.jpg" 
             alt="Atul Kumar Yadav" 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+            className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
@@ -87,9 +87,9 @@ const Team = () => (
       <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
         <div className="relative h-64 overflow-hidden">
           <img 
-            src="/Team/ehsan.jpg" 
+            src="/Team/team/Ehsan.jpg" 
             alt="Mohammad Ehsan" 
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+            className="w-full h-full object-fill object-contain transition-transform duration-300 group-hover:scale-105" 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </div>
