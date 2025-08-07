@@ -77,7 +77,7 @@ const Navbar = () => {
             <img
               src="/logo.png"
               alt="Vivarium Design Studio"
-              className="h-4 sm:h-6 md:h-8 lg:h-10 mr-1 sm:mr-2 md:mr-3 object-contain"
+              className="h-6 sm:h-8 md:h-10 lg:h-14 mr-1 mt-2 sm:mr-2 md:mr-3 object-contain"
             />
             <div className="flex flex-col">
               <div className="text-xs sm:text-sm md:text-lg lg:text-xl font-bold tracking-tight text-[#B3BD31] leading-tight">
