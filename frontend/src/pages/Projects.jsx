@@ -15,7 +15,7 @@ const Projects = () => {
   const categories = [
     { id: 'architecture', name: 'Architecture' },
     { id: 'interior', name: 'Interior' },
-    { id: 'urban', name: 'Urban Projects' }
+    { id: 'urban', name: 'Urban Design' }
   ];
 
   const projects = {

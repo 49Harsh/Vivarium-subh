@@ -56,7 +56,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       location: 'Muzaffarpur, India',
       area: '385.52 sq. m.',
       siteArea: '190 sq. m.',
-      status: 'Under Construction',
+      status: 'Completed',
       projectType: 'Residential',
       floors: 'G+1',
       configuration: '5 BHK Bungalow',
