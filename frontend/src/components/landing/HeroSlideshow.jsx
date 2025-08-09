@@ -5,15 +5,13 @@ const HeroSlideshow  = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  // Placeholder images - you can replace these with your actual images
+  // Using homepage images from public folder
   const images = [
-    '/hero-image/Picture1.jpg',
-    '/hero-image/Picture3.jpg',
-    '/hero-image/Picture4.jpg',
-    '/hero-image/Picture5.jpg',
-    '/hero-image/Picture6.jpg',
-    '/hero-image/Picture7.jpg',
-    '/hero-image/Picture8.jpg'
+    '/homepage/1.jpg',
+    '/homepage/2.jpg',
+    '/homepage/3.jpg',
+    '/homepage/NIGHT VIEW FINAL.png',
+    '/homepage/villa cam 2.jpg'
   ];
 
   useEffect(() => {

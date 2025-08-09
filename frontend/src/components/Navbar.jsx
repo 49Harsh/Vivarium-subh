@@ -49,37 +49,21 @@ const Navbar = () => {
     <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-white shadow-sm'
       }`}>
       <div className="flex justify-between items-center h-[50px] sm:h-[60px] lg:h-[70px] px-2 sm:px-4">
-        {/* Logo section - brand color background */}
-        {/* <div className={`bg-[#B3BD31] h-full py-1 sm:py-2 px-2 sm:px-4 lg:px-6 flex items-center justify-center transition-all duration-300 ${scrolled ? 'lg:pl-8' : 'lg:pl-6'
-          } relative ml-2  sm:ml-6 md:ml-12 lg:ml-16 xl:ml-24`}>
-          <div className="absolute top-0  left-0 w-full h-[140%] bg-[#B3BD31] z-[-1] rounded-br-lg rounded-bl-lg shadow-md"></div>
-          <Link to="/" className="flex mt-6 items-center justify-center">
-            <img
-              src="/logo.png"
-              alt="Vivarium Design Studio"
-              className="h-4 sm:h-6 md:h-8 lg:h-10 mr-1 sm:mr-2 md:mr-3"
-            />
-            <div className="flex flex-col">
-              <div className="text-xs sm:text-sm md:text-lg lg:text-xl font-bold tracking-tight text-white leading-tight">
-                Vivarium
-              </div>
-              <div className="text-[10px] sm:text-xs md:text-sm font-medium text-white leading-tight">
-                Design Studio
-              </div>
-            </div>
-          </Link>
-        </div> */}
+       
 
         {/* New Logo section - white background */}
-        <div className={`bg-white h-full py-1 sm:py-2 px-2 sm:px-4 lg:px-6 flex items-center justify-center transition-all duration-300 ${scrolled ? 'lg:pl-8' : 'lg:pl-6'
+        <div className={`bg-white h-full py-1 sm:py-2 px-2 sm:px-4 lg:px-6 flex items-center justify-center transition-all overflow-hidden duration-300 ${scrolled ? 'lg:pl-8' : 'lg:pl-6'
+
           } relative ml-2 sm:ml-6 md:ml-12 lg:ml-16 xl:ml-24 `}>
-          <Link to="/" className="flex items-center justify-center">
+          <Link to="/" className="flex items-center justify-center overflow-hidden">
+
             <img
               src="/logo.png"
               alt="Vivarium Design Studio"
-              className="h-6 sm:h-8 md:h-10 lg:h-14 mr-1 mt-2 sm:mr-2 md:mr-3 object-contain"
+              className="h-7 sm:h-9 md:h-12 lg:h-18 mt-2 sm:mr-1 md:mr-1 object-contain object-center"
+
             />
-            <div className="flex flex-col">
+            <div className="flex flex-col ml-0">
               <div className="text-xs sm:text-sm md:text-lg lg:text-xl font-bold tracking-tight text-[#B3BD31] leading-tight">
                 Vivarium
               </div>

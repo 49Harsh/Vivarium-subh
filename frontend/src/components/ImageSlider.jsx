@@ -4,31 +4,27 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const ImageSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Sample architecture images (you can replace these with your preferred images)
+    // Homepage images from public folder
     const images = [
         {
-            url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80',
-            alt: 'Modern Architecture Building'
+            url: '/homepage/1.jpg',
+            alt: 'Vivarium Design Project 1'
         },
         {
-            url: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            alt: 'Contemporary House Design'
+            url: '/homepage/2.jpg',
+            alt: 'Vivarium Design Project 2'
         },
         {
-            url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            alt: 'Luxury Villa Interior'
+            url: '/homepage/3.jpg',
+            alt: 'Vivarium Design Project 3'
         },
         {
-            url: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            alt: 'Modern Office Building'
+            url: '/homepage/NIGHT VIEW FINAL.png',
+            alt: 'Vivarium Night View Design'
         },
         {
-            url: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            alt: 'Modern Residential Complex'
-        },
-        {
-            url: 'https://images.unsplash.com/photo-1600566753151-384129cf4e3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-            alt: 'Urban Planning Project'
+            url: '/homepage/villa cam 2.jpg',
+            alt: 'Vivarium Villa Design'
         }
     ];
 
