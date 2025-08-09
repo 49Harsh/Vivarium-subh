@@ -177,7 +177,7 @@ const ConsultingServicesPage = () => {
           "/Projects/Architecture/Town House/VILLA CAM 1.jpg"
         ],
         category: "Architecture",
-        stats: { projects: "5+", years: "5+" }
+        stats: { projects: "50+" }
       },
       {
         id: 2,
@@ -191,11 +191,11 @@ const ConsultingServicesPage = () => {
           "/Projects/Interior/Yes Germany, Andheri/1.jpg"
         ],
         category: "Interior",
-        stats: { projects: "5+", years: "5+" }
+        stats: { projects: "30+" }
       },
       {
         id: 3,
-        title: "Urban Projects",
+        title: "Urban Design",
         subtitle: "Community Planning",
         description: "Comprehensive urban planning solutions that create sustainable communities and enhance quality of life for residents. We design public spaces and urban developments that bring communities together.",
         images: [
@@ -205,7 +205,7 @@ const ConsultingServicesPage = () => {
           "/Projects/Urban Projects/scj(hc)/3.jpg"
         ],
         category: "Urban",
-        stats: { projects: "5+", years: "5+" }
+        stats: { projects: "5+" }
       }
     ];
 
@@ -295,10 +295,6 @@ const ConsultingServicesPage = () => {
                            <div className="text-center">
                              <div className="text-3xl font-bold text-[#B3BD31]">{project.stats.projects}</div>
                              <div className="text-sm text-gray-500 uppercase tracking-wide">Projects</div>
-                           </div>
-                           <div className="text-center">
-                             <div className="text-3xl font-bold text-[#B3BD31]">{project.stats.years}</div>
-                             <div className="text-sm text-gray-500 uppercase tracking-wide">Experience</div>
                            </div>
                          </div>
                          

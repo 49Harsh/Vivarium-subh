@@ -27,7 +27,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2026',
       year: '2026'
     },
-    '/Projects/Architecture/Maurya Heights/mhjpg': {
+    '/Projects/Architecture/Maurya Heights/mh.jpg': {
       title: 'Maurya Heights',
       location: 'Nashik, India',
       area: '5109.66 sq. m.',
@@ -161,37 +161,66 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
     year: 'Year TBD'
   };
 
-  // Create images array with different project images for navigation
+  // Create images array for the current project
   const getProjectImages = () => {
-    if (!allProjects || allProjects.length === 0) {
-      return [project?.image].filter(Boolean);
+    if (!project || !project.image) {
+      return [];
     }
     
-    // Get current project index
-    const currentIndex = allProjects.findIndex(p => p.id === project?.id);
+    // Define multiple images for each project
+    const projectImagesMap = {
+      // Town House
+      '/Projects/Architecture/Town House/VILLA CAM 1.jpg': [
+        '/Projects/Architecture/Town House/VILLA CAM 1.jpg',
+        '/Projects/Architecture/Town House/VILLA CAM 2.jpg',
+        '/Projects/Architecture/Town House/VILLA CAM 3.jpg',
+        '/Projects/Architecture/Town House/VILLA CAM 4.jpg'
+      ],
+      // Maurya Heights
+      '/Projects/Architecture/Maurya Heights/mh.jpg': [
+        '/Projects/Architecture/Maurya Heights/mh.jpg',
+        '/Projects/Architecture/Maurya Heights/mh2.jpg',
+        '/Projects/Architecture/Maurya Heights/mh3.jpg'
+      ],
+      // Triplet Bungalow
+      '/Projects/Architecture/Triplet Bungalow/tb1.jpg': [
+        '/Projects/Architecture/Triplet Bungalow/tb1.jpg',
+        '/Projects/Architecture/Triplet Bungalow/tb2.jpg',
+        '/Projects/Architecture/Triplet Bungalow/tb3.jpg'
+      ],
+      // Pooja's Niwas
+      '/Projects/Architecture/Pooja Niwas/pooja.png': [
+        '/Projects/Architecture/Pooja Niwas/pooja.png',
+        '/Projects/Architecture/Pooja Niwas/pooja2.png',
+        '/Projects/Architecture/Pooja Niwas/pooja3.png'
+      ],
+      // Default case for other projects
+    };
     
-    // Create array with different project images
-    const images = [];
-    for (let i = 0; i < Math.min(4, allProjects.length); i++) {
-      const index = (currentIndex + i) % allProjects.length;
-      images.push(allProjects[index]?.image);
-    }
-    
-    return images.filter(Boolean);
+    // Return the images for the current project or just the single image if no multiple images defined
+    return projectImagesMap[project.image] || [project.image];
   };
 
   const projectImages = getProjectImages();
 
+  // Handle swiper navigation buttons (prev/next) to navigate between projects
   const handleSwiperChange = (swiper) => {
+    // We'll keep this empty for now as we'll handle navigation with custom buttons
+  };
+  
+  // Navigate to previous project
+  const goToPrevProject = () => {
     if (onNavigate && allProjects && allProjects.length > 0) {
-      const newIndex = swiper.realIndex;
-      // Calculate which project to navigate to based on current project and slide index
-      const currentProjectIndex = allProjects.findIndex(p => p.id === project?.id);
-      const targetIndex = (currentProjectIndex + newIndex) % allProjects.length;
-      
-      if (targetIndex !== currentProjectIndex) {
-        onNavigate(targetIndex);
-      }
+      const prevIndex = (currentIndex - 1 + allProjects.length) % allProjects.length;
+      onNavigate(prevIndex);
+    }
+  };
+
+  // Navigate to next project
+  const goToNextProject = () => {
+    if (onNavigate && allProjects && allProjects.length > 0) {
+      const nextIndex = (currentIndex + 1) % allProjects.length;
+      onNavigate(nextIndex);
     }
   };
 
@@ -209,17 +238,78 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
         >
         <div className="relative w-full h-full max-w-7xl max-h-[95vh] bg-white rounded-2xl overflow-hidden" onClick={e => e.stopPropagation()}>
           {/* Close button */}
-                     <button
-             className="absolute right-4 top-4 bg-white rounded-full p-3 shadow-lg z-20 hover:bg-gray-100 transition-colors"
-             onClick={(e) => {
-               e.stopPropagation();
-               onClose();
-             }}
-           >
+          <button
+            className="absolute right-4 top-4 bg-white rounded-full p-3 shadow-lg z-20 hover:bg-gray-100 transition-colors"
+            onClick={(e) => {
+              e.stopPropagation();
+              onClose();
+            }}
+          >
             <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
+          
+          {/* Navigation Controls - All in one line */}
+          <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 flex items-center space-x-4 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
+            {/* Project Navigation - Previous (Double Arrow) */}
+            <button
+              className="bg-white rounded-full p-3 shadow-md hover:bg-gray-100 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                goToPrevProject();
+              }}
+              title="Previous Project"
+            >
+              <svg className="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 19l-7-7 7-7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            {/* Image Navigation - Previous */}
+            <button
+              className="bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (mainSwiper) mainSwiper.slidePrev();
+              }}
+              title="Previous Image"
+            >
+              <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            
+            {/* Image Navigation - Next */}
+            <button
+              className="bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                if (mainSwiper) mainSwiper.slideNext();
+              }}
+              title="Next Image"
+            >
+              <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            
+            {/* Project Navigation - Next (Double Arrow) */}
+            <button
+              className="bg-white rounded-full p-3 shadow-md hover:bg-gray-100 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                goToNextProject();
+              }}
+              title="Next Project"
+            >
+              <svg className="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 5l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
             {/* Left Side - Project Details */}
@@ -289,7 +379,6 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
                 loop={true}
                 modules={[FreeMode, Navigation, Pagination, Thumbs, Autoplay]}
                 className="main-swiper h-96 lg:h-[calc(100vh-200px)]"
-                                 onSlideChange={handleSwiperChange}
               >
                 {projectImages.map((image, index) => (
                   <SwiperSlide key={index}>
@@ -324,23 +413,12 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
                   <SwiperSlide key={index}>
                     <div 
                       className="relative w-full h-full cursor-pointer rounded-lg overflow-hidden border-2 border-transparent hover:border-[#B3BD31] transition-all duration-300"
-                                             onClick={() => {
-                         if (allProjects && allProjects.length > 0) {
-                           // Calculate which project to navigate to
-                           const currentIndex = allProjects.findIndex(p => p.id === project?.id);
-                           const targetIndex = (currentIndex + index) % allProjects.length;
-                           
-                           // Navigate to the target project
-                           if (onNavigate) {
-                             onNavigate(targetIndex);
-                           }
-                           
-                                                       // Reset swiper to first slide
-                            if (mainSwiper && mainSwiper.slides && mainSwiper.slides.length > 0) {
-                              mainSwiper.slideTo(0);
-                            }
-                         }
-                       }}
+                      onClick={() => {
+                        // Just navigate to the specific slide within the current project
+                        if (mainSwiper && mainSwiper.slides && mainSwiper.slides.length > 0) {
+                          mainSwiper.slideTo(index);
+                        }
+                      }}
                     >
                                              <img
                          src={image}
@@ -361,4 +439,4 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
   );
 };
 
-export default ProjectDetailModal; 
+export default ProjectDetailModal;
