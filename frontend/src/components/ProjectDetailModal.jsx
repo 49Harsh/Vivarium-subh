@@ -172,29 +172,72 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       // Town House
       '/Projects/Architecture/Town House/VILLA CAM 1.jpg': [
         '/Projects/Architecture/Town House/VILLA CAM 1.jpg',
-        '/Projects/Architecture/Town House/VILLA CAM 2.jpg',
-        '/Projects/Architecture/Town House/VILLA CAM 3.jpg',
-        '/Projects/Architecture/Town House/VILLA CAM 4.jpg'
+        '/Projects/Architecture/Town House/villa cam 2.jpg',
+      
       ],
       // Maurya Heights
       '/Projects/Architecture/Maurya Heights/mh.jpg': [
         '/Projects/Architecture/Maurya Heights/mh.jpg',
-        '/Projects/Architecture/Maurya Heights/mh2.jpg',
-        '/Projects/Architecture/Maurya Heights/mh3.jpg'
       ],
       // Triplet Bungalow
       '/Projects/Architecture/Triplet Bungalow/tb1.jpg': [
         '/Projects/Architecture/Triplet Bungalow/tb1.jpg',
         '/Projects/Architecture/Triplet Bungalow/tb2.jpg',
-        '/Projects/Architecture/Triplet Bungalow/tb3.jpg'
       ],
       // Pooja's Niwas
       '/Projects/Architecture/Pooja Niwas/pooja.png': [
         '/Projects/Architecture/Pooja Niwas/pooja.png',
-        '/Projects/Architecture/Pooja Niwas/pooja2.png',
-        '/Projects/Architecture/Pooja Niwas/pooja3.png'
       ],
-      // Default case for other projects
+      // Villa Eichleite
+      '/Projects/Architecture/Villa Eichleite/ve.jpg': [
+        '/Projects/Architecture/Villa Eichleite/ve.jpg',
+      ],
+      // Yadav Enclave
+      '/Projects/Architecture/Yadav Enclave/ye.jpg': [
+        '/Projects/Architecture/Yadav Enclave/ye.jpg',
+      ],
+      // Yes Germany - Andheri
+      '/Projects/Interior/Yes Germany, Andheri/1.jpg': [
+        '/Projects/Interior/Yes Germany, Andheri/1.jpg',
+        '/Projects/Interior/Yes Germany, Andheri/2.jpg',
+        '/Projects/Interior/Yes Germany, Andheri/3.jpg',
+        '/Projects/Interior/Yes Germany, Andheri/4.jpg',
+
+      ],
+      // Yes Germany - Belapur
+      '/Projects/Interior/Yes Germany, Belapur/3.jpeg': [
+        '/Projects/Interior/Yes Germany, Belapur/3.jpeg',
+        '/Projects/Interior/Yes Germany, Belapur/4.jpeg',
+        '/Projects/Interior/Yes Germany, Belapur/5.jpeg',
+        '/Projects/Interior/Yes Germany, Belapur/6.jpg',
+        '/Projects/Interior/Yes Germany, Belapur/7.jpg',
+
+      ],
+      // Spiceland
+      '/Projects/Interior/Spiceland/sp.jpg': [
+        '/Projects/Interior/Spiceland/sp.jpg',
+        '/Projects/Interior/Spiceland/sp2.jpg',
+
+      ],
+      // Abu Niwas
+      '/Projects/Interior/Abu Niwas/an1.jpg': [
+        '/Projects/Interior/Abu Niwas/an1.jpg',
+        '/Projects/Interior/Abu Niwas/an2.jpg',
+
+      ],
+      // Smart City Junction Design (Hathi Chowk)
+      '/Projects/Urban Projects/scj(hc)/1.jpg': [
+        '/Projects/Urban Projects/scj(hc)/1.jpg',
+        '/Projects/Urban Projects/scj(hc)/2.jpg',
+        '/Projects/Urban Projects/scj(hc)/3.jpg',
+      ],
+      // Smart City Junction Design (Mithanpura Chowk)
+      '/Projects/Urban Projects/scj(mc)/1.jpg': [
+        '/Projects/Urban Projects/scj(mc)/1.jpg',
+        '/Projects/Urban Projects/scj(mc)/2.jpg',
+        '/Projects/Urban Projects/scj(mc)/3.jpg',
+
+      ],
     };
     
     // Return the images for the current project or just the single image if no multiple images defined
@@ -204,9 +247,9 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
   const projectImages = getProjectImages();
 
   // Handle swiper navigation buttons (prev/next) to navigate between projects
-  const handleSwiperChange = (swiper) => {
-    // We'll keep this empty for now as we'll handle navigation with custom buttons
-  };
+  // const handleSwiperChange = (swiper) => {
+  //   // We'll keep this empty for now as we'll handle navigation with custom buttons
+  // };
   
   // Navigate to previous project
   const goToPrevProject = () => {
