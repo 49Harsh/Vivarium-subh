@@ -233,7 +233,7 @@ const Projects = () => {
             onMouseEnter={() => setIsArchHovered(true)}
             onMouseLeave={() => setIsArchHovered(false)}
           >
-            {[...projects.architecture, ...projects.architecture].map((project, index) => (
+            {[...projects.architecture].map((project, index) => (
               <div
                 key={`arch-${project.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
@@ -289,7 +289,7 @@ const Projects = () => {
                 onMouseEnter={() => setIsResHovered(true)}
                 onMouseLeave={() => setIsResHovered(false)}
               >
-                {[...projects.interior.residential, ...projects.interior.residential].map((project, index) => (
+                {[...projects.interior.residential].map((project, index) => (
                   <div
                     key={`res-${project.id}-${index}`}
                     className="flex-shrink-0 w-72 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
@@ -342,7 +342,7 @@ const Projects = () => {
                 onMouseEnter={() => setIsComHovered(true)}
                 onMouseLeave={() => setIsComHovered(false)}
               >
-                {[...projects.interior.commercial, ...projects.interior.commercial].map((project, index) => (
+                {[...projects.interior.commercial].map((project, index) => (
                   <div
                     key={`com-${project.id}-${index}`}
                     className="flex-shrink-0 w-72 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
@@ -396,7 +396,7 @@ const Projects = () => {
             onMouseEnter={() => setIsUrbanHovered(true)}
             onMouseLeave={() => setIsUrbanHovered(false)}
           >
-            {[...projects.urban, ...projects.urban].map((project, index) => (
+            {[...projects.urban].map((project, index) => (
               <div
                 key={`urban-${project.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
