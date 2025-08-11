@@ -262,7 +262,9 @@ const ConsultingServicesPage = () => {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-                backgroundSize: '200% 200%'
+                backgroundSize: '200% 200%',
+                paddingBottom: '0.1em',
+                lineHeight: '1.2'
               }}
             >
               Project Overview
