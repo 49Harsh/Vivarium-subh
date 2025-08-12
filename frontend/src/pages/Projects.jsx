@@ -106,7 +106,7 @@ const Projects = () => {
       {
         id: 12,
         title: 'Smart City Junction Design (Mithanpura Chowk)',
-        image: '/Projects/Urban Projects//scj(mc)/1.jpg',
+        image: '/Projects/Urban Projects/scj(mc)/1.jpg',
         description: 'Junction design project in Muzaffarpur covering 479 sq. m.'
       }
     ]

@@ -235,9 +235,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       '/Projects/Urban Projects/scj(mc)/1.jpg': [
         '/Projects/Urban Projects/scj(mc)/1.jpg',
         '/Projects/Urban Projects/scj(mc)/2.jpg',
-        '/Projects/Urban Projects/scj(mc)/3.jpg'
-
-
+        '/Projects/Urban Projects/scj(mc)/3.jpg',
       ],
     };
     
