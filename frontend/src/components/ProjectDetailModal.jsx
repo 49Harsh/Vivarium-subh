@@ -20,6 +20,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       title: 'Town House',
       location: 'Munich, Germany',
       area: '1484.94 sq. m.',
+      siteArea: '572.94 sq. m.',
       status: 'Under Construction',
       projectType: 'Residential',
       floors: 'G+3',
@@ -31,7 +32,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       title: 'Maurya Heights',
       location: 'Nashik, India',
       area: '5109.66 sq. m.',
-      siteArea: '1152 sq. m.',
+      siteArea: '1152 sq. m',
       status: 'Completed',
       projectType: 'Residential',
       floors: 'G+7',
@@ -374,6 +375,16 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Area</h3>
                     <p className="text-gray-800 font-medium">{details.area}</p>
                   </div>
+
+                 {
+                  details.siteArea && (
+                    <div className="bg-white p-4 rounded-lg shadow-sm">
+                      <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Site Area</h3>
+                      <p className="text-gray-800 font-medium">{details.siteArea}</p>
+                    </div>
+                  )
+
+                 }
 
                   <div className="bg-white p-4 rounded-lg shadow-sm">
                     <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Status</h3>
