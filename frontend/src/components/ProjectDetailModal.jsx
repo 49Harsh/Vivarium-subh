@@ -46,7 +46,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       siteArea: '859 sq. m.',
       status: 'Under Construction',
       projectType: 'Residential',
-      floors: 'G+1',
+      floors: 'G+2',
       configuration: 'Triplet Bungalow',
       possessionDate: '2026',
       year: '2026'
@@ -150,15 +150,15 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
   };
 
   const details = projectDetails[project?.image] || {
-    location: 'Location TBD',
-    area: 'Area TBD',
-    siteArea: 'Site Area TBD',
-    status: 'Status TBD',
-    projectType: 'Project Type TBD',
-    floors: 'Floors TBD',
-    configuration: 'Configuration TBD',
-    possessionDate: 'TBD',
-    year: 'Year TBD'
+    location: 'Location TBH',
+    area: 'Area TBH',
+    siteArea: 'Site Area TBH',
+    status: 'Status TBH',
+    projectType: 'Project Type TBH',
+    floors: 'Floors TBH',
+    configuration: 'Configuration TBH',
+    possessionDate: 'TBH',
+    year: 'Year TBH'
   };
 
   // Create images array for the current project
@@ -235,7 +235,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       '/Projects/Urban Projects/scj(mc)/1.jpg': [
         '/Projects/Urban Projects/scj(mc)/1.jpg',
         '/Projects/Urban Projects/scj(mc)/2.jpg',
-        '/Projects/Urban Projects/scj(mc)/3.jpg',
+        '/Projects/Urban Projects/scj(mc)/3.jpg'
+
 
       ],
     };
