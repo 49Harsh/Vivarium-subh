@@ -10,9 +10,10 @@ const Team = () => (
       </p>
     </div>
     
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {/* Custom responsive grid with fixed behavior for 415px-720px */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
       {/* Ashish Sharma */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
+      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/Ashish pic.jpg" 
@@ -30,7 +31,7 @@ const Team = () => (
       </div>
       
       {/* Rashid Sikandar */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
+      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/Rashid.jpg" 
@@ -48,7 +49,7 @@ const Team = () => (
       </div>
       
       {/* Alok Gupta */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
+      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/Alok G.jpg" 
@@ -66,7 +67,7 @@ const Team = () => (
       </div>
       
       {/* Atul Kumar Yadav */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
+      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/atul.jpg" 
@@ -84,7 +85,7 @@ const Team = () => (
       </div>
       
       {/* Mohammad Ehsan */}
-      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100">
+      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/Ehsan.jpg" 
@@ -101,6 +102,25 @@ const Team = () => (
         </div>
       </div>
     </div>
+
+    <style jsx>{`
+      @media (min-width: 415px) and (max-width: 720px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .grid > div {
+          max-width: none !important;
+        }
+      }
+      @media (min-width: 720px) and (max-width: 1280px) {
+        .grid {
+          grid-template-columns: repeat(4, 1fr) !important;
+        }
+        .grid > div {
+          max-width: none !important;
+        }
+      }
+    `}</style>
   </section>
 );
 
