@@ -58,9 +58,9 @@ const Navbar = () => {
           <Link to="/" className="flex items-center justify-center overflow-hidden">
 
             <img
-              src="/logo.png"
+              src="/logo-new.png"
               alt="Vivarium Design Studio"
-              className="h-7 sm:h-9 md:h-12 lg:h-18 mt-2 sm:mr-1 md:mr-1 object-contain object-center"
+              className="h-6 sm:h-8 md:h-12 lg:h-16 mt-1 sm:mr-1 md:mr-1 object-contain object-center"
 
             />
             <div className="flex flex-col ml-0">

@@ -50,30 +50,37 @@ const ImageSlider = () => {
     };
 
     return (
-        <div className="relative w-full h-screen overflow-hidden bg-gray-900">
+        <div className="relative w-full overflow-hidden bg-white h-auto md:h-screen">
             {/* Images */}
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-auto md:h-full">
                 {images.map((image, index) => (
                     <div
                         key={index}
-                        className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'
-                            }`}
+                        className={`absolute inset-0 w-full transition-opacity duration-1000 ease-in-out ${
+                            index === currentSlide ? 'opacity-100' : 'opacity-0'
+                        }`}
                     >
                         <img
                             src={image.url}
                             alt={image.alt}
-                            className="w-full h-full object-contain md:object-cover"
+                            className="w-full h-auto md:w-full md:h-full md:object-cover block"
                         />
-                        <div className="absolute inset-0 bg-black/30"></div>
+                        <div className="absolute inset-0 bg-black/20"></div>
                     </div>
                 ))}
+                
+                {/* Invisible image to maintain container height - only on mobile */}
+                <img
+                    src={images[0].url}
+                    alt="Height maintainer"
+                    className="w-full h-auto opacity-0 block md:hidden"
+                />
             </div>
 
             {/* Navigation Arrows */}
             <button
                 onClick={prevSlide}
                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group z-20 cursor-pointer"
-                style={{ zIndex: 20 }}
             >
                 <ChevronLeft className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
             </button>
@@ -81,7 +88,6 @@ const ImageSlider = () => {
             <button
                 onClick={nextSlide}
                 className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group z-20 cursor-pointer"
-                style={{ zIndex: 20 }}
             >
                 <ChevronRight className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
             </button>
@@ -104,10 +110,11 @@ const ImageSlider = () => {
                     <button
                         key={index}
                         onClick={() => goToSlide(index)}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
-                            ? 'bg-[#B3BD31] scale-125'
-                            : 'bg-white/50 hover:bg-white/70'
-                            }`}
+                        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                            index === currentSlide
+                                ? 'bg-[#B3BD31] scale-125'
+                                : 'bg-white/50 hover:bg-white/70'
+                        }`}
                     />
                 ))}
             </div>

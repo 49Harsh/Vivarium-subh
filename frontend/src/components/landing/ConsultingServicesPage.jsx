@@ -148,6 +148,9 @@ const ConsultingServicesPage = () => {
     "/Client/Picture28.png",
     "/Client/Picture29.png",
     "/Client/Picture30.png",
+    "/Client/chaline.jpg",
+    
+
   ];
 
   // Duplicate the logos for seamless infinite scrolling

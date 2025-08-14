@@ -29,7 +29,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       year: '2026'
     },
     '/Projects/Architecture/Maurya Heights/mh.jpg': {
-      title: 'Maurya Heights',
+      title: 'Morya Heights',
       location: 'Nashik, India',
       area: '5109.66 sq. m.',
       siteArea: '1152 sq. m',

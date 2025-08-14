@@ -29,7 +29,7 @@ const Projects = () => {
       },
       {
         id: 2,
-        title: 'Maurya Heights',
+        title: 'Morya Heights',
         image: '/Projects/Architecture/Maurya Heights/mh.jpg',
         description: 'Residential complex in Nashik with G+7 configuration and 2 BHK apartments.'
       },
@@ -220,7 +220,7 @@ const Projects = () => {
             } : {}}
             transition={{
               x: {
-                duration: 20,
+                duration: 15,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "linear"
@@ -276,7 +276,7 @@ const Projects = () => {
                 } : {}}
                 transition={{
                   x: {
-                    duration: 15,
+                    duration: 5,
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "linear"
@@ -383,7 +383,7 @@ const Projects = () => {
             } : {}}
             transition={{
               x: {
-                duration: 15,
+                duration: 5,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "linear"
