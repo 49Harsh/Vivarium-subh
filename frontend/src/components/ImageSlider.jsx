@@ -50,7 +50,7 @@ const ImageSlider = () => {
     };
 
     return (
-        <div className="relative w-full overflow-hidden bg-white h-auto md:h-screen">
+        <div className="relative w-full overflow-hidden bg-white h-auto md:h-screen pt-[40px] md:pt-0">
             {/* Images */}
             <div className="relative w-full h-auto md:h-full">
                 {images.map((image, index) => (
@@ -95,7 +95,7 @@ const ImageSlider = () => {
             {/* Overlay Content */}
             <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white px-4">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">
+                    <h1 className="text-xl md:text-6xl font-bold mb-4 drop-shadow-lg">
                         Vivarium Design Studio
                     </h1>
                     <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto drop-shadow-md">
