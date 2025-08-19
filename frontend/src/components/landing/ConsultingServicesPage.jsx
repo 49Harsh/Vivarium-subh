@@ -316,7 +316,7 @@ const ConsultingServicesPage = () => {
                              window.scrollTo(0, 0);
                            }}
                          >
-                           <button className="group relative px-8 py-4 bg-gradient-to-r from-[#B3BD31] to-[#9CAD28] text-white font-bold text-lg rounded-full shadow-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105">
+                           <button className="group relative px-4 py-4 bg-gradient-to-r from-[#B3BD31] to-[#9CAD28] text-white font-bold text-lg rounded-lg shadow-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-90">
                              <span className="relative z-10 flex items-center">
                                Learn More About {project.title}
                                <svg className="w-5 h-5 ml-3 transition-transform duration-500 group-hover:translate-x-2" fill="currentColor" viewBox="0 0 24 24">
@@ -451,7 +451,7 @@ const ConsultingServicesPage = () => {
                 window.scrollTo(0, 0);
               }}
             >
-              <button className="group relative px-16 py-5 bg-gradient-to-r from-[#B3BD31] to-[#9CAD28] text-white font-bold text-xl rounded-full shadow-2xl overflow-hidden transition-all duration-700 hover:shadow-3xl hover:scale-105">
+              <button className="group relative px-16 py-5 bg-gradient-to-r from-[#B3BD31] to-[#9CAD28] text-white font-bold text-xl rounded-lg shadow-2xl overflow-hidden transition-all duration-700 hover:shadow-3xl hover:scale-105">
                 <span className="relative z-10 flex items-center">
                   Explore All Projects
                   <svg className="w-7 h-7 ml-4 transition-transform duration-500 group-hover:translate-x-3" fill="currentColor" viewBox="0 0 24 24">
