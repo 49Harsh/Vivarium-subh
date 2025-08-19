@@ -14,7 +14,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [mainSwiper, setMainSwiper] = useState(null);
 
-  // Sample project details data - you can expand this
+  // Sample project details data 
   const projectDetails = {
     '/Projects/Architecture/Town House/VILLA CAM 1.jpg': {
       title: 'Town House',
@@ -372,7 +372,9 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
                   </div>
 
                   <div className="bg-white p-4 rounded-lg shadow-sm">
-                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Area</h3>
+                    <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                      {project?.image?.includes('/Projects/Architecture/') ? 'B.U.Area' : 'Area'}
+                    </h3>
                     <p className="text-gray-800 font-medium">{details.area}</p>
                   </div>
 
