@@ -127,6 +127,10 @@ const ConsultingServicesPage = () => {
                 className="flex items-center justify-center text-gray-700 hover:text-[#B3BD31]"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
+                onClick={() => {
+                  // Force scroll to top when navigating to anchor links
+                  setTimeout(() => window.scrollTo(0, 0), 100);
+                }}
               >
                 <span>{link.text}</span>
                 <svg className="w-4 h-4 ml-2 text-[#B3BD31]" fill="currentColor" viewBox="0 0 24 24">
@@ -305,7 +309,13 @@ const ConsultingServicesPage = () => {
                          </div>
                          
                          {/* Learn More Button */}
-                         <Link to="/projects">
+                         <Link 
+                           to={`/projects/${project.category.toLowerCase()}`}
+                           onClick={() => {
+                             // Force scroll to top when navigating
+                             window.scrollTo(0, 0);
+                           }}
+                         >
                            <button className="group relative px-8 py-4 bg-gradient-to-r from-[#B3BD31] to-[#9CAD28] text-white font-bold text-lg rounded-full shadow-xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:scale-105">
                              <span className="relative z-10 flex items-center">
                                Learn More About {project.title}
@@ -434,7 +444,13 @@ const ConsultingServicesPage = () => {
 
           {/* Call to Action Button */}
           <div className="text-center mt-16">
-            <Link to="/projects">
+            <Link 
+              to="/projects"
+              onClick={() => {
+                // Force scroll to top when navigating
+                window.scrollTo(0, 0);
+              }}
+            >
               <button className="group relative px-16 py-5 bg-gradient-to-r from-[#B3BD31] to-[#9CAD28] text-white font-bold text-xl rounded-full shadow-2xl overflow-hidden transition-all duration-700 hover:shadow-3xl hover:scale-105">
                 <span className="relative z-10 flex items-center">
                   Explore All Projects
@@ -589,7 +605,13 @@ const ConsultingServicesPage = () => {
 
             <div className="mt-10 text-center">
               <p className="text-gray-700 font-medium">Join our growing list of satisfied clients</p>
-              <Link to="/contact">
+              <Link 
+                to="/contact"
+                onClick={() => {
+                  // Force scroll to top when navigating
+                  window.scrollTo(0, 0);
+                }}
+              >
                 <motion.button
                   className="mt-4 px-8 py-3 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                   style={{ backgroundColor: '#B3BD31' }}

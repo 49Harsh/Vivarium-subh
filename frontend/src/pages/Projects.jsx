@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ProjectDetailModal from '../components/ProjectDetailModal';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 
 const Projects = () => {
+  const location = useLocation();
   const [activeCategory, setActiveCategory] = useState('architecture');
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -180,6 +182,21 @@ const Projects = () => {
     setSelectedImage(null);
     setCurrentImageIndex(0);
   }, [activeCategory]);
+
+  // Set active category based on URL path and scroll to top
+  useEffect(() => {
+    const path = location.pathname;
+    if (path.includes('/projects/architecture')) {
+      setActiveCategory('architecture');
+      window.scrollTo(0, 0);
+    } else if (path.includes('/projects/interior')) {
+      setActiveCategory('interior');
+      window.scrollTo(0, 0);
+    } else if (path.includes('/projects/urban')) {
+      setActiveCategory('urban');
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   return (
     <section className="max-w-6xl mx-auto mt-24 py-10 px-4">
