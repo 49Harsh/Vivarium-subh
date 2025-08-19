@@ -296,7 +296,7 @@ const ConsultingServicesPage = () => {
                  <div key={project.id} className="mb-20">
                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                      {/* Left Side - Project Details (or Right for Interior) */}
-                     <div className={`${project.title === "Interior" ? "order-1 lg:order-2" : "order-2 lg:order-1"}`}>
+                     <div className={`order-2 ${project.title === "Interior" ? "lg:order-2" : "lg:order-1"}`}>
                        <div className="text-left">
                          <h3 className="text-4xl font-bold text-gray-800 mb-4">{project.title}</h3>
                          <p className="text-xl text-[#B3BD31] font-semibold mb-4">{project.subtitle}</p>
@@ -330,7 +330,7 @@ const ConsultingServicesPage = () => {
                      </div>
 
                      {/* Right Side - Swiper Gallery (or Left for Interior) */}
-                     <div className={`${project.title === "Interior" ? "order-2 lg:order-1" : "order-1 lg:order-2"}`}>
+                     <div className={`order-1 ${project.title === "Interior" ? "lg:order-1" : "lg:order-2"}`}>
                        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
                          {/* Main Swiper */}
                          <Swiper
