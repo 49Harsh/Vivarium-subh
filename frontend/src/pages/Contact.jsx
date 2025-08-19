@@ -60,7 +60,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-8 lg:gap-16">
           {/* Contact Information */}
           <div className="md:w-1/2 bg-gray-50 p-6 sm:p-8 lg:p-10 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 reveal">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gradient mb-6 sm:mb-8 lg:mb-10 font-playfair">Connect With Us</h2>
+           <h2 className="text-2xl sm:text-3xl font-bold text-gradient mb-6 sm:mb-8 lg:mb-10 font-playfair text-center">Connect With Us</h2>
 
             <div className="space-y-8 sm:space-y-10">
               <div className="flex items-start stagger-container">
