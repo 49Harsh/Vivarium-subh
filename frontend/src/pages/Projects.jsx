@@ -32,7 +32,7 @@ const Projects = () => {
       {
         id: 2,
         title: 'Morya Heights',
-        image: '/Projects/Architecture/Maurya Heights/mh.jpg',
+        image: '/Projects/Architecture/Maurya Heights/mh3.jpg',
         description: 'Residential complex in Nashik with G+7 configuration and 2 BHK apartments.'
       },
       {

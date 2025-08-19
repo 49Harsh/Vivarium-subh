@@ -181,7 +181,7 @@ const ConsultingServicesPage = () => {
         images: [
           "/Projects/Architecture/Pooja Niwas/pooja.png",
           "/Projects/Architecture/Triplet Bungalow/tb1.jpg",
-          "/Projects/Architecture/Maurya Heights/mh.jpg",
+          "/Projects/Architecture/Maurya Heights/mh3.jpg",
           "/Projects/Architecture/Town House/VILLA CAM 1.jpg"
         ],
         category: "Architecture",

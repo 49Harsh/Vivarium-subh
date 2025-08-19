@@ -28,7 +28,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2026',
       year: '2026'
     },
-    '/Projects/Architecture/Maurya Heights/mh.jpg': {
+    '/Projects/Architecture/Maurya Heights/mh3.jpg': {
       title: 'Morya Heights',
       location: 'Nashik, India',
       area: '5109.66 sq. m.',
@@ -43,7 +43,7 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
     '/Projects/Architecture/Triplet Bungalow/tb1.jpg': {
       title: 'Triplet Bungalow',
       location: 'Munich, Germany',
-      area: '5414 sq. m.',
+      area: '2414 sq. m.',
       siteArea: '859 sq. m.',
       status: 'Under Construction',
       projectType: 'Residential',
@@ -67,8 +67,8 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
     '/Projects/Architecture/Villa Eichleite/ve.jpg': {
       title: 'Villa Eichleite',
       location: 'Munich, Germany',
-      area: '5414 sq. m.',
-      siteArea: '859 sq. m.',
+      area: '2200 sq. m.',
+      siteArea: '1200 sq. m.',
       status: 'Under Construction',
       projectType: 'Residential',
       floors: 'G+2',
@@ -177,8 +177,10 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       
       ],
       // Maurya Heights
-      '/Projects/Architecture/Maurya Heights/mh.jpg': [
-        '/Projects/Architecture/Maurya Heights/mh.jpg',
+      '/Projects/Architecture/Maurya Heights/mh3.jpg': [
+        '/Projects/Architecture/Maurya Heights/mh3.jpg',
+        '/Projects/Architecture/Maurya Heights/mh2.jpg',
+        '/Projects/Architecture/Maurya Heights/mh4.jpg',
       ],
       // Triplet Bungalow
       '/Projects/Architecture/Triplet Bungalow/tb1.jpg': [
