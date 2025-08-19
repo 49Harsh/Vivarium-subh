@@ -75,7 +75,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="stagger-item">
-                  <h3 className="text-xl font-semibold text-blue-800 mb-2">Office Address</h3>
+                  <h3 className="text-xl font-semibold text-[#B3BD31] mb-2">Office Address</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Office No. 5, Vivarium Design Studio Private Limited,<br />
                     Sai Rama, Plot No. 3A, Sector 2,<br />
@@ -91,8 +91,8 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="stagger-item">
-                  <h3 className="text-xl font-semibold text-blue-800 mb-2">Email</h3>
-                  <a href="mailto:info@vivarium.co.in" className="text-gray-700 hover:text-blue-800 transition-colors">
+                  <h3 className="text-xl font-semibold text-[#B3BD31] mb-2">Email</h3>
+                  <a href="mailto:info@vivarium.co.in" className="text-gray-700 hover:text-[#B3BD31] transition-colors">
                     info@vivarium.co.in
                   </a>
                 </div>
@@ -105,15 +105,15 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="stagger-item">
-                  <h3 className="text-xl font-semibold text-blue-800 mb-2">Phone</h3>
-                  <a href="tel:+919930336099" className="text-gray-700 hover:text-blue-800 transition-colors">
+                  <h3 className="text-xl font-semibold text-[#B3BD31] mb-2">Phone</h3>
+                  <a href="tel:+919930336099" className="text-gray-700 hover:text-[#B3BD31] transition-colors">
                     +91 9930336099
                   </a>
                 </div>
               </div>
 
               <div className="pt-8 border-t border-gray-200">
-                <h3 className="text-xl font-semibold text-blue-800 mb-5">Office Hours</h3>
+                <h3 className="text-xl font-semibold text-[#B3BD31] mb-5">Office Hours</h3>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="bg-white p-4 rounded-lg shadow-sm">
                     <p className="font-medium text-gray-800 mb-1">Monday - Friday</p>
@@ -208,7 +208,7 @@ const Contact = () => {
                 <div className="animate-slide-up delay-500">
                   <button
                     type="submit"
-                    className="px-8 py-4 bg-gradient-to-r from-blue-700 to-blue-900 text-white font-semibold rounded-md hover-lift transition-all duration-300 hover:shadow-lg"
+                    className="px-8 py-4 bg-[#B3BD31] text-white font-semibold rounded-md hover-lift transition-all duration-300 hover:shadow-lg"
                   >
                     Send Message
                   </button>
