@@ -158,7 +158,8 @@ const ConsultingServicesPage = () => {
 
   // Professional Project Overview with Swiper Thumbs Gallery
   const ProjectOverviewSection = () => {
-    const [swiperStates, setSwiperStates] = React.useState({
+    // Using useRef instead of useState to avoid stale state issues
+    const swiperStatesRef = useRef({
       architecture: { main: null, thumbs: null },
       interior: { main: null, thumbs: null },
       urban: { main: null, thumbs: null }
@@ -285,7 +286,7 @@ const ConsultingServicesPage = () => {
            <div className="max-w-7xl mx-auto">
              {projectData.map((project) => {
                const projectKey = project.title.toLowerCase().replace(/\s+/g, '');
-               const currentSwiperState = swiperStates[projectKey] || { main: null, thumbs: null };
+               const currentSwiperState = swiperStatesRef.current[projectKey] || { main: null, thumbs: null };
                
                return (
                  <div key={project.id} className="mb-20">
@@ -324,10 +325,10 @@ const ConsultingServicesPage = () => {
                          {/* Main Swiper */}
                          <Swiper
                            onSwiper={(swiper) => {
-                             setSwiperStates(prev => ({
-                               ...prev,
-                               [projectKey]: { ...prev[projectKey], main: swiper }
-                             }));
+                             swiperStatesRef.current[projectKey] = {
+                               ...swiperStatesRef.current[projectKey],
+                               main: swiper
+                             };
                            }}
                            spaceBetween={10}
                            navigation={true}
@@ -340,8 +341,16 @@ const ConsultingServicesPage = () => {
                            modules={[FreeMode, Navigation, Pagination, Thumbs, Autoplay]}
                            className="main-swiper h-80 md:h-[450px]"
                            onSlideChange={(swiper) => {
-                             if (currentSwiperState.thumbs && currentSwiperState.thumbs.slides && currentSwiperState.thumbs.slides.length > 0) {
-                               currentSwiperState.thumbs.slideTo(swiper.realIndex);
+                             // Always get the latest reference from swiperStatesRef.current
+                             const latestSwiperState = swiperStatesRef.current[projectKey];
+                             if (latestSwiperState && latestSwiperState.thumbs && latestSwiperState.thumbs.slides && latestSwiperState.thumbs.slides.length > 0) {
+                               // Use slideToLoop instead of slideTo for loop mode
+                               if (latestSwiperState.thumbs.slideToLoop) {
+                                 latestSwiperState.thumbs.slideToLoop(swiper.realIndex);
+                               } else {
+                                 // Fallback to slideTo if slideToLoop is not available
+                                 latestSwiperState.thumbs.slideTo(swiper.realIndex);
+                               }
                              }
                            }}
                          >
@@ -366,16 +375,16 @@ const ConsultingServicesPage = () => {
                          {/* Thumbs Swiper */}
                          <Swiper
                            onSwiper={(swiper) => {
-                             setSwiperStates(prev => ({
-                               ...prev,
-                               [projectKey]: { ...prev[projectKey], thumbs: swiper }
-                             }));
+                             swiperStatesRef.current[projectKey] = {
+                               ...swiperStatesRef.current[projectKey],
+                               thumbs: swiper
+                             };
                            }}
                            spaceBetween={10}
                            slidesPerView={4}
                            freeMode={true}
                            watchSlidesProgress={true}
-                           loop={true}
+                           loop={false}
                            modules={[FreeMode, Navigation, Thumbs]}
                            className="thumbs-swiper h-20 bg-gray-100 p-3"
                          >
@@ -384,13 +393,22 @@ const ConsultingServicesPage = () => {
                                <div 
                                  className="relative w-full h-full cursor-pointer rounded-lg overflow-hidden border-2 border-transparent hover:border-[#B3BD31] transition-all duration-300"
                                  onClick={() => {
-                                   if (currentSwiperState.main && currentSwiperState.main.slides && currentSwiperState.main.slides.length > 0) {
-                                     currentSwiperState.main.slideTo(index);
+                                   // Always get the latest reference from swiperStatesRef.current
+                                   const latestSwiperState = swiperStatesRef.current[projectKey];
+                                   if (latestSwiperState && latestSwiperState.main && latestSwiperState.main.slides && latestSwiperState.main.slides.length > 0) {
+                                     // Use slideToLoop instead of slideTo for loop mode
+                                     if (latestSwiperState.main.slideToLoop) {
+                                       latestSwiperState.main.slideToLoop(index);
+                                     } else {
+                                       // Fallback to slideTo if slideToLoop is not available
+                                       latestSwiperState.main.slideTo(index + latestSwiperState.main.loopedSlides);
+                                     }
+                                     
                                      // Pause autoplay temporarily when user clicks
-                                     if (currentSwiperState.main.autoplay) {
-                                       currentSwiperState.main.autoplay.stop();
+                                     if (latestSwiperState.main.autoplay) {
+                                       latestSwiperState.main.autoplay.stop();
                                        setTimeout(() => {
-                                         currentSwiperState.main.autoplay.start();
+                                         latestSwiperState.main.autoplay.start();
                                        }, 2000);
                                      }
                                    }
