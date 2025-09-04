@@ -26,7 +26,7 @@ const Team = () => (
           <h3 className="text-lg font-bold mb-1" style={{ color: '#B3BD31' }}>Ashish Sharma</h3>
           <p className="text-gray-600 text-sm font-medium mb-2">Project Architect</p>
           <p className="text-gray-500 text-xs mb-3 leading-relaxed">B.Arch (Mumbai), M.Urban Agglomeration (Germany)</p>
-          <p className="text-gray-700 text-sm leading-relaxed">Luxury villas, residential complexes, institutional spaces. Global experience in India & Germany.</p>
+          <p className="text-gray-700 text-sm leading-relaxed">Extensive experience in designing luxury villas, residential complexes, commercial and institutional spaces, with international exposures.</p>
         </div>
       </div>
       
@@ -44,7 +44,7 @@ const Team = () => (
           <h3 className="text-lg font-bold mb-1" style={{ color: '#B3BD31' }}>Rashid Sikandar</h3>
           <p className="text-gray-600 text-sm font-medium mb-2">Design Architect</p>
           <p className="text-gray-500 text-xs mb-3 leading-relaxed">B.Arch (Mumbai), MBA Supply Chain (Germany)</p>
-          <p className="text-gray-700 text-sm leading-relaxed">Bridges design innovation with operational efficiency. 4+ years in construction & architecture.</p>
+          <p className="text-gray-700 text-sm leading-relaxed">Seamlessly blending design innovation with operational efficiency, with expertise spanning construction and architecture. A strong understanding of supply chain dynamics ensures impactful projects delivered with creativity, precision, and lasting value.</p>
         </div>
       </div>
       

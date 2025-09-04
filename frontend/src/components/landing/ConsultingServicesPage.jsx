@@ -264,7 +264,7 @@ const ConsultingServicesPage = () => {
           <div className="text-center mb-20">
             <h2
               ref={titleRef}
-              className="text-6xl md:text-7xl font-bold mb-8"
+              className="text-4xl md:text-5xl font-bold mb-8"
               style={{
                 background: 'linear-gradient(135deg, #2D3748, #B3BD31, #4A5568)',
                 WebkitBackgroundClip: 'text',
@@ -476,7 +476,10 @@ const ConsultingServicesPage = () => {
         <ProjectOverviewSection />
 
         {/* Services Section */}
-        <div className="py-12">
+        <div className="pb-12">
+          <div className="text-center mb-16 border border-gray-200 rounded-md p-6">
+            <h2 className="text-4xl font-bold text-[#B3BD31] mb-4">Our Process</h2>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {/* Advise Card */}
             <AnimatedSection animation={fadeInUp} id="advice">
@@ -561,7 +564,7 @@ const ConsultingServicesPage = () => {
         <div className="mb-20">
           <AnimatedSection animation={fadeInUp} id="our-clients">
             <div className="text-center mb-10">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Clients</h2>
+              <h2 className="text-4xl font-bold text-[#B3BD31] mb-4">Our Clients</h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 We're proud to have worked with a diverse range of clients across industries. Our partnerships are built on trust, communication, and delivering exceptional results.
               </p>
