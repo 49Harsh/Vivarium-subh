@@ -58,6 +58,48 @@ const Projects = () => {
         title: 'Yadav Enclave',
         image: '/Projects/Architecture/Yadav Enclave/ye.jpg',
         description: '6BHK Cluster Bungalows in Gorakhpur with G+2 configuration.'
+      },
+      {
+        id: 7,
+        title: 'Giravale 103',
+        image: '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/01.jpg',
+        description: 'Residential project in Giravale, Panvel with G+12 configuration and 1 BHK, 2BHK apartments.'
+      },
+      {
+        id: 8,
+        title: 'Venkatesha Realty',
+        image: '/Projects/Architecture/VENKATESHA REALTY/VENKATESHA REALTY/VIEWS_01 new.png',
+        description: 'Residential complex in Shirdhon, Panvel with G+7 configuration and 1 BHK apartments.'
+      },
+      {
+        id: 9,
+        title: 'Jai Malhar Phase III',
+        image: '/Projects/Architecture/JAI MALHAR PHASE III/JAI MALHAR PHASE III/Scene 1.png',
+        description: 'Residential project in Shedung, Panvel with G+7 configuration and 1BHK, 2BHK apartments.'
+      },
+      {
+        id: 10,
+        title: 'Jai Malhar Phase V',
+        image: '/Projects/Architecture/JAI MALHAR PHASE V/JAI MALHAR PHASE V/VIEWS_02.png',
+        description: 'Residential complex in Shedung, Panvel with G+7 configuration and 1BHK, 2BHK apartments.'
+      },
+      {
+        id: 11,
+        title: 'Ashte 58.2',
+        image: '/Projects/Architecture/ASHTE 58.2/ASHTE 58.2/204ee68f-d4f7-4e58-8ddd-ffb62d8e5a8e.png',
+        description: 'Residential project in Ashte, Panvel with G+7 configuration and 1 BHK, 2BHK apartments.'
+      },
+      {
+        id: 12,
+        title: 'Giravale 38',
+        image: '/Projects/Architecture/GIRAVALE 38/GIRAVALE 38/1.jpg',
+        description: 'Residential complex in Giravale, Panvel with G+14 configuration and 1BHK, 1.5BHK, 2BHK apartments.'
+      },
+      {
+        id: 13,
+        title: 'Arivali 105',
+        image: '/Projects/Architecture/ARIVALI 105/ARIVALI 105/apartment cam 01.jpg',
+        description: 'Residential project in Arivali, Panvel with G+13 configuration and 1 BHK, 1.5BHK, 2BHK apartments.'
       }
     ],
 

@@ -88,6 +88,97 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       possessionDate: '2025',
       year: '2025'
     },
+    '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/01.jpg': {
+      title: 'Giravale 103',
+      location: 'Giravale, Panvel',
+      area: '9296 sq. m.',
+      siteArea: '4150 sq. m.',
+      status: 'Under Construction',
+      projectType: 'Residential',
+      floors: 'G+12',
+      configuration: '1 BHK, 2BHK',
+      possessionDate: '2028',
+      year: '2028',
+      developer: 'JP Buildcon'
+    },
+    '/Projects/Architecture/VENKATESHA REALTY/VENKATESHA REALTY/VIEWS_01 new.png': {
+      title: 'Venkatesha Realty',
+      location: 'Shirdhon, Panvel',
+      area: '7600 sq. m.',
+      siteArea: '4750 sq. m.',
+      status: 'Under Construction',
+      projectType: 'Residential',
+      floors: 'G+7',
+      configuration: '1 BHK',
+      possessionDate: '2028',
+      year: '2028',
+      developer: 'JP Buildcon'
+    },
+    '/Projects/Architecture/JAI MALHAR PHASE III/JAI MALHAR PHASE III/Scene 1.png': {
+      title: 'Jai Malhar Phase III',
+      location: 'Shedung, Panvel',
+      area: '4480 sq. m.',
+      siteArea: '2000 sq. m.',
+      status: 'Under Construction',
+      projectType: 'Residential',
+      floors: 'G+7',
+      configuration: '1BHK, 2BHK',
+      possessionDate: '2027',
+      year: '2027',
+      developer: 'Bhagyashree Enterprises'
+    },
+    '/Projects/Architecture/JAI MALHAR PHASE V/JAI MALHAR PHASE V/VIEWS_02.png': {
+      title: 'Jai Malhar Phase V',
+      location: 'Shedung, Panvel',
+      area: '13816.60 sq. m.',
+      siteArea: '6170 sq. m.',
+      status: 'Under Construction',
+      projectType: 'Residential',
+      floors: 'G+7',
+      configuration: '1BHK, 2BHK',
+      possessionDate: '2028',
+      year: '2028',
+      developer: 'Bhagyashree Enterprises'
+    },
+    '/Projects/Architecture/ASHTE 58.2/ASHTE 58.2/204ee68f-d4f7-4e58-8ddd-ffb62d8e5a8e.png': {
+      title: 'Ashte 58.2',
+      location: 'Ashte, Panvel',
+      area: '8052.80 sq. m.',
+      siteArea: '3595 sq. m.',
+      status: 'Under Construction',
+      projectType: 'Residential',
+      floors: 'G+7',
+      configuration: '1 BHK, 2BHK',
+      possessionDate: '2028',
+      year: '2028',
+      developer: 'Bhagyashree Builders & Developers'
+    },
+    '/Projects/Architecture/GIRAVALE 38/GIRAVALE 38/1.jpg': {
+      title: 'Giravale 38',
+      location: 'Giravale, Panvel',
+      area: '10750 sq. m.',
+      siteArea: '4430 sq. m.',
+      status: 'Under Construction',
+      projectType: 'Residential',
+      floors: 'G+14',
+      configuration: '1BHK, 1.5BHK, 2BHK',
+      possessionDate: '2028',
+      year: '2028',
+      developer: 'JP Buildcon'
+    },
+    '/Projects/Architecture/ARIVALI 105/ARIVALI 105/apartment cam 01.jpg': {
+      title: 'Arivali 105',
+      location: 'Arivali, Panvel',
+      area: '18500 sq. m.',
+      siteArea: '8270 sq. m.',
+      status: 'Under Construction',
+      projectType: 'Residential',
+      floors: 'G+13',
+      configuration: '1 BHK, 1.5BHK, 2BHK',
+      possessionDate: '2027',
+      year: '2027',
+      developer: 'JP Buildcon'
+    },
     '/Projects/Interior/Yes Germany, Andheri/1.jpg': {
       title: 'YES Germany - Andheri',
       location: 'Andheri, Mumbai, India',
@@ -198,6 +289,52 @@ const ProjectDetailModal = ({ project, isOpen, onClose, allProjects, currentInde
       // Yadav Enclave
       '/Projects/Architecture/Yadav Enclave/ye.jpg': [
         '/Projects/Architecture/Yadav Enclave/ye.jpg',
+      ],
+      // Giravale 103
+      '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/01.jpg': [
+        '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/01.jpg',
+        '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/02.jpg',
+        '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/Birds eye view.jpg',
+        '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/Elevation view From Gate.jpg',
+        '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/Elevation view From RG.jpg',
+        '/Projects/Architecture/GIRAVALE 103/GIRAVALE 103/Elevation view Front.jpg',
+      ],
+      // Venkatesha Realty
+      '/Projects/Architecture/VENKATESHA REALTY/VENKATESHA REALTY/VIEWS_01 new.png': [
+        '/Projects/Architecture/VENKATESHA REALTY/VENKATESHA REALTY/VIEWS_01 new.png',
+        '/Projects/Architecture/VENKATESHA REALTY/VENKATESHA REALTY/VIEWS_03.png',
+        '/Projects/Architecture/VENKATESHA REALTY/VENKATESHA REALTY/VIEWS_055.png',
+        '/Projects/Architecture/VENKATESHA REALTY/VENKATESHA REALTY/VIEWS_08 new.png',
+      ],
+      // Jai Malhar Phase III
+      '/Projects/Architecture/JAI MALHAR PHASE III/JAI MALHAR PHASE III/Scene 1.png': [
+        '/Projects/Architecture/JAI MALHAR PHASE III/JAI MALHAR PHASE III/Scene 1.png',
+        '/Projects/Architecture/JAI MALHAR PHASE III/JAI MALHAR PHASE III/Scene 02.png',
+        '/Projects/Architecture/JAI MALHAR PHASE III/JAI MALHAR PHASE III/Scene 03.png',
+      ],
+      // Jai Malhar Phase V
+      '/Projects/Architecture/JAI MALHAR PHASE V/JAI MALHAR PHASE V/VIEWS_02.png': [
+        '/Projects/Architecture/JAI MALHAR PHASE V/JAI MALHAR PHASE V/VIEWS_02.png',
+        '/Projects/Architecture/JAI MALHAR PHASE V/JAI MALHAR PHASE V/VIEWS_06.png',
+        '/Projects/Architecture/JAI MALHAR PHASE V/JAI MALHAR PHASE V/VIEWS_08.png',
+      ],
+      // Ashte 58.2
+      '/Projects/Architecture/ASHTE 58.2/ASHTE 58.2/204ee68f-d4f7-4e58-8ddd-ffb62d8e5a8e.png': [
+        '/Projects/Architecture/ASHTE 58.2/ASHTE 58.2/204ee68f-d4f7-4e58-8ddd-ffb62d8e5a8e.png',
+        '/Projects/Architecture/ASHTE 58.2/ASHTE 58.2/668f0401-ce8f-4f63-bec9-57fd51bf72e2.png',
+      ],
+      // Giravale 38
+      '/Projects/Architecture/GIRAVALE 38/GIRAVALE 38/1.jpg': [
+        '/Projects/Architecture/GIRAVALE 38/GIRAVALE 38/1.jpg',
+        '/Projects/Architecture/GIRAVALE 38/GIRAVALE 38/apartment cam 01.jpg',
+        '/Projects/Architecture/GIRAVALE 38/GIRAVALE 38/apartment cam 03.jpg',
+        '/Projects/Architecture/GIRAVALE 38/GIRAVALE 38/apartment cam 04.jpg',
+      ],
+      // Arivali 105
+      '/Projects/Architecture/ARIVALI 105/ARIVALI 105/apartment cam 01.jpg': [
+        '/Projects/Architecture/ARIVALI 105/ARIVALI 105/apartment cam 01.jpg',
+        '/Projects/Architecture/ARIVALI 105/ARIVALI 105/apartment cam 02.jpg',
+        '/Projects/Architecture/ARIVALI 105/ARIVALI 105/apartment cam 03.jpg',
       ],
       // Yes Germany - Andheri
       '/Projects/Interior/Yes Germany, Andheri/1.jpg': [
