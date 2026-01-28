@@ -14,16 +14,32 @@ const ImageSlider = () => {
             url: '/homepage/2.jpg',
             alt: 'Vivarium Design Project 2'
         },
-        {
-            url: '/homepage/3.jpg',
-            alt: 'Vivarium Design Project 3'
-        },
+        // {
+        //     url: '/homepage/3.jpg',
+        //     alt: 'Vivarium Design Project 3'
+        // },
         {
             url: '/homepage/NIGHT VIEW FINAL.png',
             alt: 'Vivarium Night View Design'
         },
         {
             url: '/homepage/villa cam 2.jpg',
+            alt: 'Vivarium Villa Design'
+        },
+        {
+            url: '/homepage/4.jpg',
+            alt: 'Vivarium Villa Design'
+        },
+        {
+            url: '/homepage/5.jpg',
+            alt: 'Vivarium Villa Design'
+        },
+        {
+            url: '/homepage/6.jpg',
+            alt: 'Vivarium Villa Design'
+        },
+        {
+            url: '/homepage/7.jpg',
             alt: 'Vivarium Villa Design'
         }
     ];
