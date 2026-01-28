@@ -279,7 +279,7 @@ const Projects = () => {
             } : {}}
             transition={{
               x: {
-                duration: 15,
+                duration: 30,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "linear"
@@ -287,22 +287,27 @@ const Projects = () => {
             }}
             style={{
               width: "fit-content",
-              display: "flex"
+              display: "flex",
+              willChange: "transform"
             }}
             onMouseEnter={() => setIsArchHovered(true)}
             onMouseLeave={() => setIsArchHovered(false)}
           >
-            {[...projects.architecture].map((project, index) => (
+            {/* Duplicate the array twice for seamless infinite scroll */}
+            {[...projects.architecture, ...projects.architecture].map((project, index) => (
               <div
                 key={`arch-${project.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                 onClick={() => openProjectDetail(project)}
+                style={{ willChange: "transform" }}
               >
-                <div className="h-64 overflow-hidden">
+                <div className="h-64 overflow-hidden bg-gray-100">
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    style={{ willChange: "transform" }}
                   />
                 </div>
                 <div className="p-6">
@@ -335,7 +340,7 @@ const Projects = () => {
                 } : {}}
                 transition={{
                   x: {
-                    duration: 5,
+                    duration: 10,
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "linear"
@@ -343,22 +348,26 @@ const Projects = () => {
                 }}
                 style={{
                   width: "fit-content",
-                  display: "flex"
+                  display: "flex",
+                  willChange: "transform"
                 }}
                 onMouseEnter={() => setIsResHovered(true)}
                 onMouseLeave={() => setIsResHovered(false)}
               >
-                {[...projects.interior.residential].map((project, index) => (
+                {[...projects.interior.residential, ...projects.interior.residential].map((project, index) => (
                   <div
                     key={`res-${project.id}-${index}`}
                     className="flex-shrink-0 w-72 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                     onClick={() => openProjectDetail(project)}
+                    style={{ willChange: "transform" }}
                   >
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-48 overflow-hidden bg-gray-100">
                       <img
                         src={project.image}
                         alt={project.title}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        style={{ willChange: "transform" }}
                       />
                     </div>
                     <div className="p-4">
@@ -388,7 +397,7 @@ const Projects = () => {
                 } : {}}
                 transition={{
                   x: {
-                    duration: 15,
+                    duration: 20,
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "linear"
@@ -396,22 +405,26 @@ const Projects = () => {
                 }}
                 style={{
                   width: "fit-content",
-                  display: "flex"
+                  display: "flex",
+                  willChange: "transform"
                 }}
                 onMouseEnter={() => setIsComHovered(true)}
                 onMouseLeave={() => setIsComHovered(false)}
               >
-                {[...projects.interior.commercial].map((project, index) => (
+                {[...projects.interior.commercial, ...projects.interior.commercial].map((project, index) => (
                   <div
                     key={`com-${project.id}-${index}`}
                     className="flex-shrink-0 w-72 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                     onClick={() => openProjectDetail(project)}
+                    style={{ willChange: "transform" }}
                   >
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-48 overflow-hidden bg-gray-100">
                       <img
                         src={project.image}
                         alt={project.title}
+                        loading="lazy"
                         className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        style={{ willChange: "transform" }}
                       />
                     </div>
                     <div className="p-4">
@@ -442,7 +455,7 @@ const Projects = () => {
             } : {}}
             transition={{
               x: {
-                duration: 5,
+                duration: 10,
                 repeat: Infinity,
                 repeatType: "loop",
                 ease: "linear"
@@ -450,22 +463,26 @@ const Projects = () => {
             }}
             style={{
               width: "fit-content",
-              display: "flex"
+              display: "flex",
+              willChange: "transform"
             }}
             onMouseEnter={() => setIsUrbanHovered(true)}
             onMouseLeave={() => setIsUrbanHovered(false)}
           >
-            {[...projects.urban].map((project, index) => (
+            {[...projects.urban, ...projects.urban].map((project, index) => (
               <div
                 key={`urban-${project.id}-${index}`}
                 className="flex-shrink-0 w-80 bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
                 onClick={() => openProjectDetail(project)}
+                style={{ willChange: "transform" }}
               >
-                <div className="h-64 overflow-hidden">
+                <div className="h-64 overflow-hidden bg-gray-100">
                   <img
                     src={project.image}
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                    style={{ willChange: "transform" }}
                   />
                 </div>
                 <div className="p-6">
