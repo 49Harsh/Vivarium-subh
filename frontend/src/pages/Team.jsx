@@ -49,7 +49,7 @@ const Team = () => (
       </div>
       
       {/* Alok Gupta */}
-      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
+      {/* <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/Alok G.jpg" 
@@ -64,7 +64,7 @@ const Team = () => (
           <p className="text-gray-500 text-xs mb-3 leading-relaxed">Bachelor in Architecture (Mumbai University)</p>
           <p className="text-gray-700 text-sm leading-relaxed">Specializes in minimalism, functionality & futurism for elegant interior spaces.</p>
         </div>
-      </div>
+      </div> */}
       
       {/* Atul Kumar Yadav */}
       <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
