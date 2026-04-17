@@ -10,10 +10,10 @@ const Team = () => (
       </p>
     </div>
     
-    {/* Custom responsive grid with fixed behavior for 415px-720px */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {/* Responsive team grid centered automatically */}
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] justify-center gap-6">
       {/* Ashish Sharma */}
-      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
+      {/* <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/Ashish pic.jpg" 
@@ -28,10 +28,10 @@ const Team = () => (
           <p className="text-gray-500 text-xs mb-3 leading-relaxed">B.Arch (Mumbai), M.Urban Agglomeration (Germany)</p>
           <p className="text-gray-700 text-sm leading-relaxed">Extensive experience in designing luxury villas, residential complexes, commercial and institutional spaces, with international exposures.</p>
         </div>
-      </div>
+      </div> */}
       
       {/* Rashid Sikandar */}
-      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
+      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/Rashid.jpg" 
@@ -67,7 +67,7 @@ const Team = () => (
       </div> */}
       
       {/* Atul Kumar Yadav */}
-      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
+      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/atul.jpg" 
@@ -85,7 +85,7 @@ const Team = () => (
       </div>
       
       {/* Mohammad Ehsan */}
-      <div className="bg-white mx-6 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] sm:max-w-none mx-auto">
+      <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-gray-100 w-full max-w-[280px] mx-auto">
         <div className="relative h-64 overflow-hidden">
           <img 
             src="/Team/team/Ehsan.jpg" 
@@ -103,24 +103,6 @@ const Team = () => (
       </div>
     </div>
 
-    <style jsx>{`
-      @media (min-width: 415px) and (max-width: 720px) {
-        .grid {
-          grid-template-columns: repeat(2, 1fr) !important;
-        }
-        .grid > div {
-          max-width: none !important;
-        }
-      }
-      @media (min-width: 720px) and (max-width: 1280px) {
-        .grid {
-          grid-template-columns: repeat(4, 1fr) !important;
-        }
-        .grid > div {
-          max-width: none !important;
-        }
-      }
-    `}</style>
   </section>
 );
 
