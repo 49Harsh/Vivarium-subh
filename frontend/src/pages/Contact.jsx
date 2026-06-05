@@ -223,7 +223,7 @@ const Contact = () => {
             <h2 className="text-2xl sm:text-3xl font-bold text-gradient mb-6 sm:mb-8 lg:mb-10 font-playfair text-center">Our Location</h2>
             <div className="h-64 sm:h-80 md:h-96 bg-gray-200 rounded-xl overflow-hidden shadow-md">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.8234567890123!2d73.06336975739643!3d19.028804268820384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDAxJzQzLjciTiA3M8KwMDMnNDguMSJF!5e0!3m2!1sen!2sin!4v1640995200000!5m2!1sen!2sin"
+                src="https://maps.google.com/maps?q=19.026704,73.1066178&z=17&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -235,7 +235,7 @@ const Contact = () => {
             </div>
             <div className="mt-4 sm:mt-6 text-center">
               <a
-                href="https://maps.app.goo.gl/hhVpLeAbrazkYGpV6"
+                href="https://www.google.com/maps/place/Vivarium+Design+Studio+Private+Limited/@19.026704,73.1066178,912m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7c3cfcc5628cd:0x9cd6b5ec35e77aa1!8m2!3d19.026704!4d73.1066178!16s%2Fg%2F11x7qlrzb3!18m1!1e1?entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-[#B3BD31] text-white font-semibold rounded-lg hover:bg-[#9da728] transition-colors duration-300 shadow-md text-sm sm:text-base"
