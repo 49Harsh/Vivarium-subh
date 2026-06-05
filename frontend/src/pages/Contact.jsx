@@ -88,8 +88,8 @@ const Contact = () => {
                 </div>
                 <div className="stagger-item">
                   <h3 className="text-lg sm:text-xl font-semibold text-[#B3BD31] mb-2">Email</h3>
-                  <a href="mailto:info@vivarium.co.in" className="text-gray-700 hover:text-[#B3BD31] transition-colors text-sm sm:text-base">
-                    info@vivarium.co.in
+                  <a href="mailto:Vivariumdesignstudio@gmail.com" className="text-gray-700 hover:text-[#B3BD31] transition-colors text-sm sm:text-base">
+                    Vivariumdesignstudio@gmail.com
                   </a>
                 </div>
               </div>
@@ -102,8 +102,8 @@ const Contact = () => {
                 </div>
                 <div className="stagger-item">
                   <h3 className="text-lg sm:text-xl font-semibold text-[#B3BD31] mb-2">Phone</h3>
-                  <a href="tel:+919930336099" className="text-gray-700 hover:text-[#B3BD31] transition-colors text-sm sm:text-base">
-                    +91 9930336099
+                  <a href="tel:+918692006694" className="text-gray-700 hover:text-[#B3BD31] transition-colors text-sm sm:text-base">
+                    +91 8692006694
                   </a>
                 </div>
               </div>

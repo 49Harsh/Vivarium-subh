@@ -10,7 +10,7 @@ const Career = () => (
         If you would like to apply for a job opportunity with us, please send your resume to:
       </p>
       <div className="bg-white rounded-lg p-6 border-2 border-[#B3BD31] inline-block">
-        <p className="text-xl font-semibold text-[#B3BD31]">info@vivarium.co.in</p>
+        <p className="text-xl font-semibold text-[#B3BD31]">Vivariumdesignstudio@gmail.com</p>
       </div>
       <p className="text-gray-600 mt-6">
         We look forward to hearing from talented individuals who share our passion for design and architecture.
