@@ -73,9 +73,9 @@ const Contact = () => {
                 <div className="stagger-item">
                   <h3 className="text-lg sm:text-xl font-semibold text-[#B3BD31] mb-2">Office Address</h3>
                   <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                    Office No. 5, Vivarium Design Studio Private Limited,<br />
-                    Sai Rama, Plot No. 3A, Sector 2,<br />
-                    Kharghar, Navi Mumbai, Maharashtra 410210
+                    Vivarium Design Studio Pvt Ltd<br />
+                    Office No: D-6064, Bima Complex, 6th Floor,<br />
+                    Plot No 119, Kalamboli, Navi Mumbai - 410218
                   </p>
                 </div>
               </div>
